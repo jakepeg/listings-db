@@ -1,56 +1,60 @@
-import React from 'react'
 import Link from 'next/link'
+import auth0 from '../services/auth0'
 
-const links = [
-  { href: 'https://zeit.co/now', label: 'ZEIT' },
-  { href: 'https://github.com/zeit/next.js', label: 'GitHub' },
-].map(link => ({
-  ...link,
-  key: `nav-link-${link.href}-${link.label}`,
-}))
+const Login = () => {
+  return (
+    <a onClick={auth0.logout} className="nav-link" href="#">Logout</a>
+  )
+}
 
-const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      {links.map(({ key, href, label }) => (
-        <li key={key}>
-          <a href={href}>{label}</a>
-        </li>
-      ))}
-    </ul>
+const Logout = () => {
+  return (
+    <a onClick={auth0.login} className="nav-link" href="#">Login</a>
+  )
+}
 
-    <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
-      nav {
-        text-align: center;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
-        text-decoration: none;
-        font-size: 13px;
-      }
-    `}</style>
+const Nav = () => {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div className="container">
+    <Link href="/">
+      <a className="navbar-brand">DooZone</a>
+    </Link>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarResponsive">
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item active">
+            <Link href="/">
+              <a className="nav-link">Home
+                <span className="sr-only">(current)</span>
+              </a>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link href="/about">
+              <a className="nav-link">About</a>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link href="/services">
+              <a className="nav-link" href="#">Services</a>
+            </Link>
+          </li>
+          <li className="nav-item">
+          { auth0.isAuthenticated === false &&
+            <Login />
+          }
+          { auth0.isAuthenticated &&
+            <Logout />
+          }
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
-)
+  )
+}
 
 export default Nav

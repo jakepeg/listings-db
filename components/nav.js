@@ -3,13 +3,13 @@ import auth0 from '../services/auth0'
 
 const Login = () => {
   return (
-    <a onClick={auth0.logout} className="nav-link" href="#">Logout</a>
+    <a onClick={auth0.login} className="nav-link" href="#">Login</a>
   )
 }
 
 const Logout = () => {
   return (
-    <a onClick={auth0.login} className="nav-link" href="#">Login</a>
+    <a onClick={auth0.logout} className="nav-link" href="#">Logout</a>
   )
 }
 
@@ -43,10 +43,10 @@ const Nav = () => {
             </Link>
           </li>
           <li className="nav-item">
-          { auth0.isAuthenticated === false &&
+          { auth0.isAuthenticated() === false &&
             <Login />
           }
-          { auth0.isAuthenticated &&
+          { auth0.isAuthenticated() &&
             <Logout />
           }
           </li>

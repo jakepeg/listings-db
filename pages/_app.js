@@ -1,14 +1,16 @@
 import App from 'next/app'
 import Head from 'next/head'
 import Nav from '../components/nav'
-import Footer from '../components/footer'
-// import auth0 from '../services/auth0'
+// import Footer from '../components/footer'
+import auth0 from '../services/auth0'
 
 class ActivityApp extends App {
 
   static async getInitialProps(appContext) {
-    // const isAuthenticated = process.browser ? auth0.clientAuth() : auth0.serverAuth(appContext.req)
-    // console.log(isAuthenticated)
+
+
+
+    //const isAuthenticated = process.browser ? auth0.clientAuth() : auth0.serverAuth()
     const appProps = await App.getInitialProps(appContext)
     return { ...appProps }
   }
@@ -28,25 +30,50 @@ class ActivityApp extends App {
         <div className="base-page">
           <Component {...pageProps} />
         </div>
-        <Footer />
+        {/* <Footer /> */}
         <style jsx>{`
           padding-bottom: 200px;
         `}</style>
 
         <style jsx global>{`
         body {
+            background-color: #00BCD4;
             min-height: 100vh;
             position: relative;
             margin: 0;
-            padding-top: 120px;
           }
           footer {
             position: absolute;
             bottom: 0;
             width: 100%;
           }
-      `}</style>
 
+          .dark-primary-color    { background: #0097A7; }
+          .default-primary-color { background: #00BCD4; }
+          .light-primary-color   { background: #B2EBF2; }
+          .text-primary-color    { color: #FFFFFF; }
+          .accent-color          { background: #FF5722; }
+          .primary-text-color    { color: #212121; }
+          .secondary-text-color  { color: #727272; }
+          .divider-color         { border-color: #B6B6B6; }
+
+          .cardImage {
+            height: 240px;
+          }
+
+          .link-text {
+            color: #000000;
+            font-family: "Roboto", sans-serif;
+            line-height: 48px;
+            font-size: 24px;
+            font-weight: 300;
+            white-space: nowrap;
+          }
+
+          .link-text:hover {
+            text-decoration: none;
+          }
+      `}</style>
       </div>
     )
   }

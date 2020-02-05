@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Filter from '../components/filter'
 import Carousel from '../components/carousel'
-import ActivityList from '../components/activityList'
+import ActivityList from '../components/activityTest'
 import { getActivities, getCategories } from '../actions'
 
 const Home = (props) => {
@@ -26,14 +26,16 @@ const Home = (props) => {
   return (
     <div className="container home-page">
       <div className="row">
-        <div className="col-lg-3">
+        <div className="col-lg-12">
           <Filter 
             changeCategory={changeCategory}
             activeCategory={filter}
             categories={props.categories}
           />
         </div>
-        <div className="col-lg-9">
+      </div>
+      <div className="row">
+        <div className="col-lg-12">
           {/* <Carousel /> */}
           <div className="row">
             <ActivityList activities={filterActivities(props.activities) || []} />

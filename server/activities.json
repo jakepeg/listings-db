@@ -1,42 +1,52 @@
 [
   {
     "id": "1",
-    "name": "The Shawshank!!",
+    "name": "Ice Skating",
     "releaseYear": 1994,
     "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
     "rating": 4.8,
-    "category": "drama",
-    "image": "https://m.media-amazon.com/images/M/MV5BNjQ2NDA3MDcxMF5BMl5BanBnXkFtZTgwMjE5NTU0NzE@._V1_CR0,60,640,360_AL_UX477_CR0,0,477,268_AL_.jpg"
+    "category": "Birthday Parties,Sport and Games",
+    "image": "https://images.unsplash.com/photo-1517177646641-83fe10f14633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1404&q=80"
   },
   {
     "id": "2",
-    "name": "The Dark Knight",
+    "name": "Geneva Skatepark",
     "releaseYear": 2008,
     "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "description": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
     "rating": 4.7,
-    "category": "action, crime, drama",
-    "image": "https://img.cinemablend.com/filter:scale/quill/c/3/8/0/f/4/c380f4f12cfeec19f0c40c6f57db188f2f98cca8.jpg?mw=600"
+    "category": "Adventure Sports,Parks and Skate Parks,Sport and Games",
+    "image": "https://images.unsplash.com/photo-1504051569746-b952af8e65e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
   },
   {
     "id": "3",
-    "name": "Lord of the Rings",
+    "name": "The Olympics Museum",
     "releaseYear": 2004,
     "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
     "rating": 4.9,
-    "category": "adventure, drama, fantasy",
-    "image": "https://img.cinemablend.com/filter:scale/quill/0/f/5/2/a/6/0f52a6843a25c1a5c1f9a0c00548cad9e1d912e2.jpg?mw=600"
+    "category": "Attractions",
+    "image": "https://images.unsplash.com/photo-1569517282132-25d22f4573e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1433&q=80"
   },
   {
-    "name": "Classe 1P UPDATED",
-    "description": "Prototype for a school app",
+    "name": "Kids Space Etoy",
+    "description": "Bouncy fun",
     "rating": "2.5",
-    "image": "https://m.media-amazon.com/images/M/MV5BNjQ2NDA3MDcxMF5BMl5BanBnXkFtZTgwMjE5NTU0NzE@._V1_CR0,60,640,360_AL_UX477_CR0,0,477,268_AL_.jpg",
-    "cover": "https://m.media-amazon.com/images/M/MV5BNjQ2NDA3MDcxMF5BMl5BanBnXkFtZTgwMjE5NTU0NzE@._V1_CR0,60,640,360_AL_UX477_CR0,0,477,268_AL_.jpg",
+    "image": "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80",
+    "cover": "",
     "longDesc": "iouyoiuy",
-    "category": "Attractions,Art, Crafts and Cooking",
+    "category": "Birthday Parties,Play Centres",
     "id": "grm704t"
+  },
+  {
+    "name": "Arboretum Aubonne",
+    "description": "Lots of trees",
+    "rating": "3",
+    "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+    "cover": "",
+    "longDesc": "",
+    "category": "Attractions,Parks and Skate Parks",
+    "id": "qvzv9sm"
   }
 ]

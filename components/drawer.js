@@ -6,6 +6,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import AddActivityButton from './addActivityButton'
 
 const useStyles = makeStyles({
   list: {
@@ -16,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function TemporaryDrawer() {
+export default function SideDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
     top: false,
@@ -50,7 +51,7 @@ export default function TemporaryDrawer() {
       <Divider />
       <List>
         {['Share', 'Contact', 'Privacy', 'Logout'].map((text, index) => (
-          <ListItem button key={text}>
+          <ListItem button key={text} href="./create">
             <ListItemText primary={text} />
           </ListItem>
         ))}

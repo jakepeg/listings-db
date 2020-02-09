@@ -1,16 +1,10 @@
 import App from 'next/app'
 import Head from 'next/head'
 import Nav from '../components/nav'
-// import Footer from '../components/footer'
-import auth0 from '../services/auth0'
 
 class ActivityApp extends App {
 
   static async getInitialProps(appContext) {
-
-
-
-    //const isAuthenticated = process.browser ? auth0.clientAuth() : auth0.serverAuth()
     const appProps = await App.getInitialProps(appContext)
     return { ...appProps }
   }
@@ -21,27 +15,23 @@ class ActivityApp extends App {
       <div>
         <Head>
           <title>Home</title>
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
-          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossOrigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossOrigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossOrigin="anonymous"></script>
         </Head>
         <Nav />
         <div className="base-page">
           <Component {...pageProps} />
         </div>
-        {/* <Footer /> */}
         <style jsx>{`
           padding-bottom: 200px;
         `}</style>
 
         <style jsx global>{`
-        body {
+          body {
             background-color: #00BCD4;
             min-height: 100vh;
             position: relative;
             margin: 0;
           }
+
           footer {
             position: absolute;
             bottom: 0;
@@ -57,22 +47,80 @@ class ActivityApp extends App {
           .secondary-text-color  { color: #727272; }
           .divider-color         { border-color: #B6B6B6; }
 
-          .cardImage {
-            height: 240px;
-          }
-
-          .link-text {
-            color: #000000;
-            font-family: "Roboto", sans-serif;
-            line-height: 48px;
-            font-size: 24px;
+          h1 {
+            font-size: 2rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
             font-weight: 300;
-            white-space: nowrap;
+            line-height: 1;
+            letter-spacing: 0em;
+            color: rgb(0, 0, 0, 0.8);
           }
 
-          .link-text:hover {
-            text-decoration: none;
+          h2 {
+            font-size: 1.5rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 0em;
+            color: rgb(0, 0, 0, 0.8);
           }
+
+          .contain {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+          }
+
+          @media (min-width: 576px) {
+            .contain {
+                max-width: 540px;
+            }
+          }
+
+          @media (min-width: 768px) {
+            .contain {
+                max-width: 720px;
+            }
+
+            .grid-item {
+              -ms-flex: 0 0 50%;
+              flex: 0 0 50%;
+              max-width: 50%;
+            }
+          }
+
+          @media (min-width: 992px) {
+            .contain {
+                max-width: 960px;
+            }
+
+            .grid-item {
+              -ms-flex: 0 0 33.333333%;
+              flex: 0 0 33.333333%;
+              max-width: 33.333333%;
+              padding: 20px;
+            }
+          }
+
+          @media (min-width: 1200px) {
+            .contain {
+                max-width: 1140px;
+            }
+          }
+
+          .rowz {
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+              margin-right: -15px;
+              margin-left: -15px;
+          }
+
+          [hidden]{display:none!important}
+
       `}</style>
       </div>
     )

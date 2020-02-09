@@ -20,7 +20,7 @@ const Nav = () => {
   return (
     <>
     <header className="default-primary-color">
-      <div id="logo"><img id="logo" src="/logo.svg" alt="DooZone logo" /></div>
+      <img id="logo" src="/logo.svg" alt="DooZone logo" />
       <div id="menu">
       { auth0.isAuthenticated() === false &&
         <Login />

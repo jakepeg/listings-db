@@ -15,25 +15,86 @@ const DetailPage = (props) => {
   }
 
   return (
-    <div className="container">
-      <div className="jumbotron">
-        <h1 className="display-4">{activity.name}</h1>
-        <p className="lead">{ activity.description }</p>
-        <hr className="my-4" />
-        <p>{ activity.category }</p>
-        <button className="btn btn-primary btn-lg mr-1" href="#" role="button">Learn more</button>
-        <button onClick={() => handleDelete(id)} className="btn btn-danger btn-lg mr-1" href="#" role="button">Delete</button>
+    <div className="contain">
+      <div className="details-card">
+        <div className="card-header">
+          <h1>{activity.name}</h1>
+          <div id="back-btn"><img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> <span className="back">BACK</span></div>
+        </div>
+
+        <div className="card-banner">
+
+        </div>
+
+        <div className="card-content">
+
+        <div className="description">
+          <p>{ activity.description }</p>
+          <p className="categories">{ activity.category }</p>
+        </div>
+        <img className="card-image" src={activity.image} alt={activity.name} />
+        
+
+        {/* <button onClick={() => handleDelete(id)} href="#" role="button">Delete</button>
         <Link href="/activities/[id]/edit" as={`/activities/${id}/edit`}>
           <button 
-          className="btn btn-warning btn-lg" 
           role="button">Edit</button>
         </Link>
+
+        <p className="desc-text">{ activity.longDesc }</p> */}
+
+        </div>
+
       </div>
-      <p className="desc-text">{ activity.longDesc }</p>
+
       <style jsx>{`
+
+        .card-content {
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .card-header {
+          display: flex;
+          padding: 20px;
+        }
+
+        #back-btn {
+          margin-left: auto;
+        }
+
+        #arrow-left {
+          margin-top: 20px;
+        }
+
+        .details-card {
+          width: 1140px;
+          background: #fff;
+          box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+        }
+
         .desc-text {
           font-size: 18px;
         }
+
+        .card-banner {
+          display: flex;
+          height: 70px;
+          background: #0097A7;
+        }
+
+        .card-image {
+            width: 700px;
+            display: block!important;
+            background-size: cover!important;
+            background-repeat: no-repeat!important;
+        }
+
+        .description {
+          width: 370px;
+        }
+
       `}</style>
     </div>
   )

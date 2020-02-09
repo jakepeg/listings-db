@@ -4,10 +4,14 @@
     "name": "Ice Skating",
     "releaseYear": 1994,
     "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "description": "Open October to March. Hosts competitions for local teams. Free entry, skate rental is 3chf for kids  and 5 for adults. Has a bistrot where you can get drinks and meals are served lunch time Wed - Sun and every evening until 11pm. Get down at the ice disco on Friday nights :)",
     "rating": 4.8,
-    "category": "Birthday Parties,Sport and Games",
-    "image": "https://images.unsplash.com/photo-1517177646641-83fe10f14633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1404&q=80"
+    "category": "Birthday Parties, Sport and Games",
+    "image": "https://images.unsplash.com/photo-1517177646641-83fe10f14633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1404&q=80",
+    "ageFrom": "2",
+    "ageTo": "99",
+    "city": "Perroy",
+    "website": "https://www.perroy-patinoire.ch/"
   },
   {
     "id": "2",
@@ -16,8 +20,11 @@
     "longDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "description": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
     "rating": 4.7,
-    "category": "Adventure Sports,Parks and Skate Parks,Sport and Games",
-    "image": "https://images.unsplash.com/photo-1504051569746-b952af8e65e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+    "category": "Adventure Sports, Parks and Skate Parks, Sport and Games",
+    "image": "https://images.unsplash.com/photo-1504051569746-b952af8e65e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    "ageFrom": "8",
+    "ageTo": "99",
+    "city": "Geneva"
   },
   {
     "id": "3",
@@ -27,17 +34,24 @@
     "description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
     "rating": 4.9,
     "category": "Attractions",
-    "image": "https://images.unsplash.com/photo-1569517282132-25d22f4573e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1433&q=80"
+    "image": "https://images.unsplash.com/photo-1569517282132-25d22f4573e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1433&q=80",
+    "ageFrom": "0",
+    "ageTo": "99",
+    "city": "Lausanne"
   },
   {
-    "name": "Kids Space Etoy",
+    "name": "Kids Fun Park",
     "description": "Bouncy fun",
     "rating": "2.5",
     "image": "https://images.unsplash.com/photo-1498940757830-82f7813bf178?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80",
     "cover": "",
     "longDesc": "iouyoiuy",
-    "category": "Birthday Parties,Play Centres",
-    "id": "grm704t"
+    "category": "Birthday Parties, Play Centres",
+    "id": "grm704t",
+    "ageFrom": "1",
+    "ageTo": "10",
+    "city": "Etoy",
+    "website": "https://kidsfunpark.ch/"
   },
   {
     "name": "Arboretum Aubonne",
@@ -46,7 +60,38 @@
     "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
     "cover": "",
     "longDesc": "",
-    "category": "Attractions,Parks and Skate Parks",
-    "id": "qvzv9sm"
+    "category": "Attractions, Parks and Skate Parks",
+    "id": "qvzv9sm",
+    "ageFrom": "0",
+    "ageTo": "99",
+    "city": "Aubonne"
+  },
+  {
+    "name": "FC St Prex",
+    "description": "Footback club of St Prex",
+    "rating": "5",
+    "image": "https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "cover": "",
+    "longDesc": "",
+    "category": "Sport and Games",
+    "id": "va9lbpg",
+    "ageFrom": "6",
+    "ageTo": "50",
+    "city": "St Prex",
+    "website": "http://www.fcsaintprex.ch/"
+  },
+  {
+    "name": "Adults Yoga",
+    "description": "Footback club of St Prex",
+    "rating": "5",
+    "image": "  https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    "cover": "",
+    "longDesc": "",
+    "category": "Sport and Games",
+    "id": "va9lbpgfff",
+    "ageFrom": "18",
+    "ageTo": "99",
+    "city": "Etoy",
+    "website": "http://www.fcsaintprex.ch/"
   }
 ]

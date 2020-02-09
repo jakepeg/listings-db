@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Filter from '../components/filter'
-import Carousel from '../components/carousel'
 import ActivityList from '../components/activityTest'
 import { getActivities, getCategories } from '../actions'
+import Card from '../components/card'
 
 const Home = (props) => {
 
@@ -24,25 +24,23 @@ const Home = (props) => {
   }
 
   return (
-    <div className="container home-page">
-      <div className="row">
-        <div className="col-lg-12">
+    <div className="contain home-page">
+      <div className="rowz">
+
           <Filter 
             changeCategory={changeCategory}
             activeCategory={filter}
             categories={props.categories}
           />
-        </div>
+
       </div>
-      <div className="row">
-        <div className="col-lg-12">
-          {/* <Carousel /> */}
-          <div className="row">
+
+          <div className="rowz">
+            {/* <Card /> */}
             <ActivityList activities={filterActivities(props.activities) || []} />
           </div>
         </div>
-      </div>
-    </div>
+
   )
 }
 

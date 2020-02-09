@@ -45,8 +45,6 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-
-
 const Filter = (props) => {
 
   const [category, setCategory] = useState('')

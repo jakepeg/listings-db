@@ -19,22 +19,81 @@ const DetailPage = (props) => {
       <div className="details-card">
         <div className="card-header">
           <h1>{activity.name}</h1>
-          <div id="back-btn"><img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> <span className="back">BACK</span></div>
+          <div id="back-btn">
+            <img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> 
+            <span className="back">BACK</span>
+          </div>
         </div>
 
         <div className="card-banner">
-
+          <div id="location">
+            <p className="banner-label">Location /</p>
+            <p className="banner-info">{ activity.city }</p>
+          </div>
+          <div id="price-range">
+            <p className="banner-label">Price Range /</p>
+            <p className="banner-info">{ activity.price }</p>
+          </div>
+          <div id="age-range">
+            <p className="banner-label">Age Range /</p>
+            <p className="banner-info">{ activity.ageFrom } - { activity.ageTo } years</p>
+          </div>
+          <div id="icons">
+            <img className="banner-icon" src="/favorite.svg" alt="Add to favorites" />
+            <img className="banner-icon" src="/share.svg" alt="Share" />
+            {/* <img className="banner-icon" src="/website.svg" alt="Visit website" /> */}
+          </div>
         </div>
 
         <div className="card-content">
 
-        <div className="description">
-          <p>{ activity.description }</p>
-          <p className="categories">{ activity.category }</p>
-        </div>
-        <img className="card-image" src={activity.image} alt={activity.name} />
-        
+          <div className="info-section">
+            <p className="description">{ activity.description }</p>
+            {activity.address.length > 0 &&
+              <span>
+                {/* <p className="label">Address /</p> */}
+                <p className="info">
+                <a href={'https://www.google.com/maps/search/?api=1&query=' + activity.address} target="_blank">
+                <img className="map-icon" align="top" src="/place.svg" alt="Map pin" />
+                { activity.address }
+                </a></p>
+              </span>
+            }
 
+            {activity.phone.length > 0 &&
+              <span>
+                {/* <p className="label">Phone /</p> */}
+                <p className="info">
+                <a href={'tel:' + activity.phoneFormatted}>
+                <img className="map-icon" align="top" src="/phone.svg" alt="Phone icon" /> 
+                { activity.phone }
+                </a></p>
+              </span>
+            }
+
+            {activity.website.length > 0 &&
+              <span>
+                {/* <p className="label">Website /</p> */}
+                <p className="info">
+                <a href={'http://' + activity.website} target="_blank">
+                <img className="map-icon" align="top" src="/right-arrow.svg" alt="Right arrow" />
+                { activity.website }
+                </a></p>
+              </span>
+            }
+
+            
+
+            {/* <p className="label">Filed in /</p> */}
+            <p className="info">
+            <img className="map-icon" align="top" src="/tags.svg" alt="Tags icon" />
+            { activity.category }
+            </p>
+
+            {/* <p className="categories">{ activity.category }</p> */}
+          </div>
+          <img className="image-section" src={activity.image} alt={activity.name} />
+        
         {/* <button onClick={() => handleDelete(id)} href="#" role="button">Delete</button>
         <Link href="/activities/[id]/edit" as={`/activities/${id}/edit`}>
           <button 
@@ -48,24 +107,32 @@ const DetailPage = (props) => {
       </div>
 
       <style jsx>{`
+        #back-btn {
+          margin-left: auto;
+          margin-top: 15px;
+          cursor: pointer;
+          opacity: 0.7;
+        }
+
+        #back-btn :hover {
+          opacity: 1;
+        }
+
+        #arrow-left {
+          margin-bottom: -6px;
+          margin-right: 3px;
+        }
 
         .card-content {
           padding: 20px;
           display: flex;
           justify-content: space-between;
+          align-items: flex-start;
         }
 
         .card-header {
           display: flex;
-          padding: 20px;
-        }
-
-        #back-btn {
-          margin-left: auto;
-        }
-
-        #arrow-left {
-          margin-top: 20px;
+          padding: 0 20px;
         }
 
         .details-card {
@@ -74,25 +141,82 @@ const DetailPage = (props) => {
           box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
         }
 
-        .desc-text {
-          font-size: 18px;
-        }
-
         .card-banner {
           display: flex;
-          height: 70px;
-          background: #0097A7;
+          justify-content: space-between;
+          height: 60px;
+          background: #ff6633;
+          padding: 0 20px;
+          margin-bottom: 20px;
         }
 
-        .card-image {
+        .banner-label {
+          color: rgb(255, 255, 255, 0.8);
+          font-size: 0.8rem;
+          text-transform: uppercase;
+        }
+
+        .label {
+          color: rgb(0, 0, 0, 0.6);
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          margin-bottom: -10px;
+        }
+
+        .info {
+          color: #0097A7;
+          margin: 5px 0;
+        }
+
+        a {
+          color: #0097A7;
+          text-decoration: none;
+        }
+
+        a :hover {
+          text-decoration: underline;
+        }
+
+        .banner-info {
+          color: white;
+          font-size: 1rem;
+          margin-top: -10px;
+        }
+
+        #icons {
+          width: 55px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .banner-icon {
+          width: 25px;
+          opacity: 0.5;
+          cursor: pointer;
+        }
+
+        .banner-icon :hover {
+          opacity: 1;
+        }
+
+        .map-icon {
+          margin-top: 0;
+          margin-right: 10px;
+          width: 1.2rem;
+        }
+
+        .image-section {
             width: 700px;
             display: block!important;
-            background-size: cover!important;
-            background-repeat: no-repeat!important;
+        }
+
+        .info-section {
+          width: 370px;
+          margin-top: -20px;
         }
 
         .description {
-          width: 370px;
+          margin-bottom: 30px;
         }
 
       `}</style>

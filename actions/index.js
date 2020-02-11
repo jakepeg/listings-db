@@ -14,7 +14,8 @@ const CATEGORY_DATA = [
   {id: 'c-08', name: 'Performing Arts'},
   {id: 'c-09', name: 'Play Centres'},
   {id: 'c-10', name: 'Sport and Games'}, 
-  {id: 'c-11', name: 'Theme Parks and Water Parks'}
+  {id: 'c-11', name: 'Theme Parks and Water Parks'},
+  {id: 'c-12', name: 'Accademic'}
 ]
 
 export const getCategories = () => {

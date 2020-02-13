@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Filter from '../components/filter'
-import ActivityList from '../components/activityTest'
+import ActivityList from '../components/activityList'
 import { getActivities, getCategories } from '../actions'
 import Card from '../components/card'
 
@@ -37,6 +37,7 @@ const Home = (props) => {
 
           <div className="rowz">
             {/* <Card /> */}
+
             <ActivityList activities={filterActivities(props.activities) || []} />
           </div>
         </div>

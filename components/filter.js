@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '2rem',
     fontFamily: 'Roboto',
     fontWeight: 300,
+    marginLeft: '20px',
   },
 
   selecta: {
@@ -22,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 300,
     width: '500px',
     borderBottom: '2px solid #ffffff',
-    margin: '0 0 50px 0',
+    margin: '0 0 50px 20px',
     '&:before': {
       borderColor: '#ffffff',
     },

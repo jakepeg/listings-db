@@ -19,9 +19,10 @@ class ActivityApp extends App {
         <Nav />
         <div className="base-page">
           <Component {...pageProps} />
+          <div id="modal" />
         </div>
         <style jsx>{`
-          padding-bottom: 200px;
+          
         `}</style>
 
         <style jsx global>{`
@@ -36,6 +37,31 @@ class ActivityApp extends App {
             position: absolute;
             bottom: 0;
             width: 100%;
+          }
+
+          button {
+            background-color: #ffffff;
+            color: #00BCD4;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 4px;
+            border: 2px solid #00BCD4;
+            transition: 0.3s;
+            text-transform: uppercase;
+            margin-left: 20px;
+          }
+
+          button :hover {
+            background-color: #00BCD4;
+            border: 2px solid white;
+            color: white;
+          }
+
+          button.active {
+            background-color: #00BCD4;
+            border: 2px solid white;
+            color: white;
           }
 
           .dark-primary-color    { background: #0097A7; }

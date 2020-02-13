@@ -1,49 +1,175 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ClientOnlyPortal from './ClientOnlyPortal'
 import Link from 'next/link'
-import auth0 from '../services/auth0'
-import AddActivityButton from './addActivityButton'
+import Details from './detail'
+import { getActivityById } from '../actions'
 
-class ActivityList extends React.Component {
+const ActivityList = (props) => {
 
-  shorten = (text, maxlength) => {
-    if (text && text.length >= maxlength) {
-      return text.substr(0, maxlength) + '...'
-    }
-    return text
-  }
+  const [open, setOpen] = useState()
+  const { activities } = props
 
-  render() {
+  const [selectedActivity, setSelectedActivity] = useState({
+    id: "",
+    name: "",
+    category: "",
+    description: "",
+    image: "",
+    website: "",
+    city: "",
+    address: "",
+    phone: "",
+    phoneFormatted: "",
+    price: "",
+    ageFrom: "",
+    ageTo: "",
+  })
 
-    const { activities } = this.props
+  const openModal = async (id) => {
+    // 1 getActivityById (in actions) - might need to use async await
 
-      return (
-      <>
-        { activities.map(activity => 
-            (
-              <div key={activity.id} className="col-lg-4 col-md-6 mb-4">
-                    <div className="card h-100">
-                      <Link href="/activities/[id]" as={`/activities/${activity.id}`}>
-                        <a><img className="card-img-top" src={activity.image} alt={activity.name} /></a>
-                      </Link>
-                      <div className="card-body">
-                        <h4 className="card-title">
-                          <Link href="/activities/[id]" as={`/activities/${activity.id}`}>
-                            <a>{activity.name}</a>
-                          </Link>
-                        </h4>
-                        <p className="card-text">{this.shorten(activity.description, 100)}</p>
-                      </div>
-                      <div className="card-footer">
-                        <small className="text-muted">{activity.rating}</small>
-                      </div>
-                    </div>
+   const activity = await getActivityById(id)
+   console.log(activity.name)
+   //return { activity }
+
+   setSelectedActivity({
+    id: activity.id,
+    name: activity.name,
+    category: activity.category,
+    description: activity.description,
+    image: activity.image,
+    website: activity.website,
+    city: activity.city,
+    address: activity.address,
+    phone: activity.phone,
+    phoneFormatted: activity.phoneFormatted,
+    price: activity.price,
+    ageFrom: activity.ageFrom,
+    ageTo: activity.ageTo,
+  })
+
+    // 2 put the activity data into the modal props
+    // 3 open the modal - setOpen(true)
+    setOpen(true)
+  
+  } 
+
+  return (
+    <>
+      { activities.map(activity => (
+            <div key={activity.id}>
+              {/* <div className="grid-item" onClick={event => setOpen(true)}> */}
+              <div className="grid-item" onClick={event => openModal(activity.id)}>
+              {/* <Link href={`/activities/${activity.id}`}> */}
+                <div className="card">
+                <div className="card-image" style={{background: 'url(' + activity.image + ')'}}></div>
+                <div className="card-content">
+                  <h2>{activity.name}</h2>
+                  <div className="card-footer">
+                    <div className="age-range">{activity.ageFrom + ' - ' + activity.ageTo + ' yrs'}</div>
+                    <div className="location">{activity.city}</div>
+                  </div>
+                </div>
+                </div>
+              {/* </Link> */}
+              {/* <button type="button" onClick={event => setOpen(true)}>
+                {activity.name}
+              </button> */}
               </div>
-            )
+
+
+
+            </div>
           )
+        )
+      }
+
+      {open && (
+        <ClientOnlyPortal selector="#modal">
+          <div className="backdrop">
+            <div className="modal">
+              <Details 
+                id={selectedActivity.id}
+                name={selectedActivity.name}
+                city={selectedActivity.city}
+                price={selectedActivity.price}
+                ageFrom={selectedActivity.ageFrom}
+                ageTo={selectedActivity.ageTo}
+                description={selectedActivity.description}
+                address={selectedActivity.address}
+                phone={selectedActivity.phone}
+                website={selectedActivity.website}
+                category={selectedActivity.category}
+                phoneFormatted={selectedActivity.phoneFormatted}
+                image={selectedActivity.image}
+                closeModal={event => setOpen(false)}
+              />
+            </div>
+          </div>
+        </ClientOnlyPortal>
+      )}
+
+      <style jsx>{`
+
+
+        .backdrop {
+          position: fixed;
+          background-color: rgba(0, 0, 0, 0.7);
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
         }
-      </>
-      )
-    }
+
+        .modal {
+          position: absolute;
+          left: 50%;
+          margin-left: -570px;
+          margin-top: 200px;
+          width: 1140px;
+        }
+
+        .card {
+          width: 350px;
+          height: 340px;
+          background: #fff;
+          box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+          transition: 0.3s;
+          cursor: pointer;
+        }
+
+        .card :hover {
+          box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2), 0px 10px 14px 1px rgba(0,0,0,0.14), 0px 4px 18px 3px rgba(0,0,0,0.12);
+        }
+
+        .card-image {
+          width: 350px;
+          height: 250px;
+          display: block!important;
+          background-size: cover!important;
+          background-repeat: no-repeat!important;
+        }
+
+        .card-content {
+          padding: 0 20px;
+        }
+        
+        .card-footer {
+          display: flex;
+          margin-top: -3px;
+          color: rgb(0, 0, 0, 0.8);
+        }
+
+        .location {
+          margin-left: auto;
+        }
+
+        .close {
+          margin-bottom: -150px;
+        }
+      `}</style>
+    </>
+  )
 }
 
 export default ActivityList

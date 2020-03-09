@@ -15,10 +15,10 @@ class ActivityApp extends App {
       <div>
         <Head>
           <title>Home</title>
-          <link
+          {/* <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-          />
+          /> */}
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"

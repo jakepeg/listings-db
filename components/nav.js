@@ -1,6 +1,6 @@
 //import Link from 'next/link'
 import auth0 from '../services/auth0'
-import SideDrawer from './drawer'
+// import SideDrawer from './drawer'
 
 const Login = () => {
   return (
@@ -30,7 +30,7 @@ const Nav = () => {
       }
       { auth0.isAuthenticated() &&
         <>
-        <SideDrawer />
+        {/* <SideDrawer /> */}
         <Logout />
         </>
       }

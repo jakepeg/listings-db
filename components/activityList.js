@@ -26,41 +26,37 @@ const ActivityList = (props) => {
   })
 
   const openModal = async (id) => {
-    // 1 getActivityById (in actions) - might need to use async await
-
-   const activity = await getActivityById(id)
-   console.log(activity.name)
-   //return { activity }
-
-   setSelectedActivity({
-    id: activity.id,
-    name: activity.name,
-    category: activity.category,
-    description: activity.description,
-    image: activity.image,
-    website: activity.website,
-    city: activity.city,
-    address: activity.address,
-    phone: activity.phone,
-    phoneFormatted: activity.phoneFormatted,
-    price: activity.price,
-    ageFrom: activity.ageFrom,
-    ageTo: activity.ageTo,
-  })
-
-    // 2 put the activity data into the modal props
-    // 3 open the modal - setOpen(true)
+    // 1 getActivityById (in actions.js)
+    const activity = await getActivityById(id)
+    // 2 update the selectedActivity state
+    setSelectedActivity({
+      id: activity.id,
+      name: activity.name,
+      category: activity.category,
+      description: activity.description,
+      image: activity.image,
+      website: activity.website,
+      city: activity.city,
+      address: activity.address,
+      phone: activity.phone,
+      phoneFormatted: activity.phoneFormatted,
+      price: activity.price,
+      ageFrom: activity.ageFrom,
+      ageTo: activity.ageTo,
+    })
+    // 3 open the modal
     setOpen(true)
-  
   } 
 
   return (
     <>
       { activities.map(activity => (
             <div key={activity.id}>
-              {/* <div className="grid-item" onClick={event => setOpen(true)}> */}
-              <div className="grid-item" onClick={event => openModal(activity.id)}>
-              {/* <Link href={`/activities/${activity.id}`}> */}
+              {/* open in modal */}
+              {/* <div className="grid-item" onClick={event => openModal(activity.id)}> */}
+              {/* open page */}
+              <div className="grid-item">
+              <Link href={`/activities/${activity.id}`}>
                 <div className="card">
                 <div className="card-image" style={{background: 'url(' + activity.image + ')'}}></div>
                 <div className="card-content">
@@ -71,14 +67,8 @@ const ActivityList = (props) => {
                   </div>
                 </div>
                 </div>
-              {/* </Link> */}
-              {/* <button type="button" onClick={event => setOpen(true)}>
-                {activity.name}
-              </button> */}
+              </Link>
               </div>
-
-
-
             </div>
           )
         )

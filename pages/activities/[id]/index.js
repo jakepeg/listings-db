@@ -15,7 +15,7 @@ const DetailPage = (props) => {
   }
 
   return (
-    <div className="contain">
+    <div className="contain top-space">
       <div className="details-card">
         <div className="card-header">
           <h1>{activity.name}</h1>
@@ -41,7 +41,6 @@ const DetailPage = (props) => {
           <div id="icons">
             <img className="banner-icon" src="/favorite.svg" alt="Add to favorites" />
             <img className="banner-icon" src="/share.svg" alt="Share" />
-            {/* <img className="banner-icon" src="/website.svg" alt="Visit website" /> */}
           </div>
         </div>
 

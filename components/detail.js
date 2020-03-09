@@ -207,7 +207,6 @@ const Details = (props) => {
   )
 }
 
-
 // Details.getInitialProps = async ({ id }) => {
 //   const activity = await getActivityById(id)
 //   return { activity }

@@ -15,6 +15,14 @@ class ActivityApp extends App {
       <div>
         <Head>
           <title>Home</title>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+          />
+          <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+          />
         </Head>
         <Nav />
         <div className="base-page">
@@ -26,7 +34,24 @@ class ActivityApp extends App {
         `}</style>
 
         <style jsx global>{`
+
+
+        html,
           body {
+            height: 100%;
+            width: 100%;
+          }
+          *,
+          *:after,
+          *:before {
+            box-sizing: border-box;
+          }
+
+          body {
+
+            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            font-size: 1rem;
+
             background-color: #00BCD4;
             min-height: 100vh;
             position: relative;
@@ -62,6 +87,14 @@ class ActivityApp extends App {
             background-color: #00BCD4;
             border: 2px solid white;
             color: white;
+          }
+
+          .top-space {
+            margin-top: 80px;
+          }
+
+          .bottom-space {
+            margin-bottom: 80px;
           }
 
           .dark-primary-color    { background: #0097A7; }

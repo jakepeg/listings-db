@@ -1,6 +1,6 @@
 //import Link from 'next/link'
 import auth0 from '../services/auth0'
-//import SideDrawer from './drawer'
+import SideDrawer from './drawer'
 
 const Login = () => {
   return (
@@ -24,13 +24,13 @@ const Nav = () => {
       <div id="menu">
       <button type="button" className="active">Discover</button>
       <button type="button">My Classes</button>
-      <button type="button">Points</button>
+      <button type="button">My Points</button>
       { auth0.isAuthenticated() === false &&
         <Login />
       }
       { auth0.isAuthenticated() &&
         <>
-        {/* <SideDrawer /> */}
+        <SideDrawer />
         <Logout />
         </>
       }

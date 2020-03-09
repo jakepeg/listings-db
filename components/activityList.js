@@ -8,7 +8,6 @@ const ActivityList = (props) => {
 
   const [open, setOpen] = useState()
   const { activities } = props
-
   const [selectedActivity, setSelectedActivity] = useState({
     id: "",
     name: "",

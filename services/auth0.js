@@ -26,7 +26,7 @@ class Auth0 {
           resolve();
         } else if (err) {
           reject(err);
-          console.log(err);
+          // console.log(err);
         }
       });
     })
@@ -57,7 +57,7 @@ class Auth0 {
   }
 
   isAuthenticated() {
-    console.log('isAuthenticated in auth0.js')
+    // console.log('isAuthenticated in auth0.js')
     const expiresAt = Cookies.getJSON('expiresAt')
     return new Date().getTime() < expiresAt;
     }

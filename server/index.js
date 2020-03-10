@@ -80,8 +80,6 @@ app.prepare().then(() => {
     })
   })
 
-
-
   // we are handling all of the request comming to our server
   server.get('*', (req, res) => {
     // next.js is handling requests and providing pages where we are navigating to

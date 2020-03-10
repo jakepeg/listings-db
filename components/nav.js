@@ -39,7 +39,7 @@ const Nav = () => {
     <style jsx>{`
       header {
         display: flex;
-        padding: 30px 10px 0 10px;
+        padding: 20px 10px 0 10px;
         margin-bottom: 20px;
       }
 

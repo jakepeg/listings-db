@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Select from 'react-select';
+import { CATEGORY_LIST } from '../actions';
 
 const Filter = (props) => {
 
@@ -12,14 +14,35 @@ const Filter = (props) => {
     setLabel(true)
   };
 
+  const onChange = value => {
+    console.log(value)
+    props.changeCategory(value.label)
+  };
+
   return (
     <>
-      <label for="activities">Discover:</label>
-      <select id="activities" onChange={handleChange}>
-      { props.categories.map(c => 
-        <option key={c.id} value={c.name}>{c.name}</option>
-        )}
-      </select>
+      <Select 
+        className="react-select-container"
+        maxMenuHeight={550}
+        classNamePrefix="react-select"
+        onChange={onChange}
+        options={CATEGORY_LIST}
+        placeholder="Discover amazing experiences"
+        // menuIsOpen={true}
+      />
+
+      <style jsx>{`
+        .react-select-container {
+          display: none!important;
+        }
+
+        .react-select__control {
+          width: 350px!important;
+        }
+      `}</style>
+
+
+
     </>
   );
 }

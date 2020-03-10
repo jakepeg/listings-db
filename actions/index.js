@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://localhost:3000'
+const BASE_URL = process.env.BASE_URL;
+// const BASE_URL = 'http://localhost:3000'
 // const BASE_URL = 'https://doozone.now.sh'
 const ACTIVITY_DATA = []
 const CATEGORY_DATA = [

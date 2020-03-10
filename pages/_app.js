@@ -130,6 +130,77 @@ class ActivityApp extends App {
             margin-left: auto;
           }
 
+
+
+
+          .react-select-container {
+            margin: 20px 0 20px 20px;
+            
+          }
+
+
+          .react-select-container:focus {
+            outline: none;
+            
+          }
+
+          .react-select__control {
+            width: 465px;
+            border: 0 solid #fff!important;
+            border-radius: 0!important;
+            border-bottom: 2px solid #fff!important;
+            background-color: #00BCD4!important;
+            color: #fff!important;
+            font-size: 1.9em!important;
+            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif!important;
+            font-weight: 300!important;
+            cursor: pointer!important;
+          }
+
+          .react-select__control--is-focused {
+            box-shadow: none!important;
+
+          }
+
+          .react-select__placeholder, 
+          .react-select__single-value, 
+          .react-select__indicator {
+            color: #fff!important;
+          }
+
+          .react-select__indicator-separator {
+            background-color: #00BCD4!important;
+          }
+
+          .react-select__menu {
+            margin-top: 0!important;
+            border-radius: 0!important;
+          }
+
+          .react-select__menu-list {
+            max-height: 500px;
+          }
+
+          .react-select__option {
+            font-size: 1.3rem!important;
+            font-family: "Roboto","Helvetica","Arial",sans-serif;
+            font-weight: 400;
+            line-height: 1;
+            -webkit-letter-spacing: 0em;
+            -moz-letter-spacing: 0em;
+            -ms-letter-spacing: 0em;
+            letter-spacing: 0em;
+            color: rgb(0,0,0,0.8);
+            padding: 8px;
+            cursor: pointer!important;
+          }
+
+          .react-select__option--is-selected {
+            background-color: #F8F8F8!important;
+            color: rgb(0,0,0,0.8)!important;
+          }
+
+
           @media (min-width: 576px) {
             .contain {
                 max-width: 540px;

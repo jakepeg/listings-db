@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-// const BASE_URL = 'http://localhost:3000'
-const BASE_URL = 'https://doozone.now.sh'
+const BASE_URL = 'http://localhost:3000'
+// const BASE_URL = 'https://doozone.now.sh'
 const ACTIVITY_DATA = []
 const CATEGORY_DATA = [
   {id: 'c-00', name: 'All Activities'},
@@ -17,6 +17,22 @@ const CATEGORY_DATA = [
   {id: 'c-09', name: 'Play Centres'},
   {id: 'c-10', name: 'Sport and Games'}, 
   {id: 'c-11', name: 'Theme Parks and Water Parks'}
+]
+
+export const CATEGORY_LIST = [
+  {value: 'c-00', label: 'All Activities'},
+  {value: 'c-12', label: 'Accademic'},
+  {value: 'c-01', label: 'Adventure Sports'},
+  {value: 'c-02', label: 'Art, Crafts and Cooking'},
+  {value: 'c-03', label: 'Attractions'},
+  {value: 'c-04', label: 'Birthday Parties'},
+  {value: 'c-05', label: 'Events'},
+  {value: 'c-06', label: 'Holiday Camps'},
+  {value: 'c-07', label: 'Parks and Skate Parks'},
+  {value: 'c-08', label: 'Performing Arts'},
+  {value: 'c-09', label: 'Play Centres'},
+  {value: 'c-10', label: 'Sport and Games'}, 
+  {value: 'c-11', label: 'Theme Parks and Water Parks'}
 ]
 
 export const getCategories = () => {

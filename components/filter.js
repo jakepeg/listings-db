@@ -28,7 +28,6 @@ const Filter = (props) => {
         onChange={onChange}
         options={CATEGORY_LIST}
         placeholder="Discover amazing experiences"
-        // menuIsOpen={true}
         isSearchable={false}
       />
 

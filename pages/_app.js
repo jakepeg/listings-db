@@ -145,7 +145,7 @@ class ActivityApp extends App {
           }
 
           .react-select__control {
-            width: 465px;
+            width: 455px;
             border: 0 solid #fff!important;
             border-radius: 0!important;
             border-bottom: 2px solid #fff!important;
@@ -153,7 +153,7 @@ class ActivityApp extends App {
             color: #fff!important;
             font-size: 1.9em!important;
             font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif!important;
-            font-weight: 300!important;
+            font-weight: 400!important;
             cursor: pointer!important;
           }
 
@@ -179,7 +179,8 @@ class ActivityApp extends App {
           }
 
           .react-select__menu-list {
-            max-height: 500px;
+            max-height: 550px;
+            padding: 20px;
           }
 
           .react-select__option {
@@ -199,6 +200,10 @@ class ActivityApp extends App {
           .react-select__option--is-selected {
             background-color: #F8F8F8!important;
             color: rgb(0,0,0,0.8)!important;
+          }
+
+          .react-select__value-container {
+            padding: 6px 0 !important;
           }
 
 

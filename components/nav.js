@@ -20,11 +20,12 @@ const Nav = () => {
     <>
     <header>
       <img id="logo" src="/logo.svg" alt="DooZone logo" />
-      <span className="country">Switzerland en</span>
+      <span className="country">Switzerland</span>
       <div id="menu">
-      <button type="button" className="active">Discover</button>
-      <button type="button">My Classes</button>
-      <button type="button">My Points</button>
+      {/* <button type="button" className="active">Discover</button> */}
+      {/* <button type="button">My Classes</button> */}
+      {/* <button type="button">My Points</button> */}
+      <button type="button" className="accent-color">Add an activity</button>
       { auth0.isAuthenticated() === false &&
         <Login />
       }
@@ -34,6 +35,7 @@ const Nav = () => {
         <Logout />
         </>
       }
+      <button type="button" className="active">en</button>
       </div>
     </header>
     <style jsx>{`

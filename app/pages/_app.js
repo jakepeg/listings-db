@@ -84,9 +84,24 @@ class ActivityApp extends App {
           }
 
           button.active {
-            background-color: #00BCD4;
-            border: 2px solid white;
+            background-color: #e50273;
+            border: 1px solid white;
             color: white;
+            
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: .9rem;
+            padding: 7px 15px;
+          }
+
+          .cta {
+            background-color: #e50273;
+            border: 1px solid white;
+            color: white;
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: .9rem;
+            padding: 7px 15px;
           }
 
           .top-space {
@@ -105,6 +120,7 @@ class ActivityApp extends App {
           .primary-text-color    { color: #212121; }
           .secondary-text-color  { color: #727272; }
           .divider-color         { border-color: #B6B6B6; }
+          .pink                  { color: #E94969; }
 
           h1 {
             font-size: 2rem;
@@ -129,7 +145,6 @@ class ActivityApp extends App {
             margin-right: auto;
             margin-left: auto;
           }
-
 
 
 
@@ -205,6 +220,145 @@ class ActivityApp extends App {
           .react-select__value-container {
             padding: 6px 0 !important;
           }
+
+
+
+          #back-btn {
+          margin-left: auto;
+          margin-top: 15px;
+          cursor: pointer;
+          opacity: 0.7;
+        }
+
+        #back-btn :hover {
+          opacity: 1;
+        }
+
+        #arrow-left {
+          margin-bottom: -6px;
+          margin-right: 3px;
+        }
+
+        .details-card {
+          background: #fff;
+          box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+        }
+
+        .card-header {
+          display: flex;
+          padding: 0 20px;
+        }
+
+        .card-banner {
+          display: flex;
+          justify-content: space-between;
+          height: 60px;
+          background: #ff6633;
+          padding: 0 20px;
+          margin-bottom: 20px;
+        }
+
+        .card-content {
+          padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+
+        .image-section {
+            width: 700px;
+            display: block!important;
+        }
+
+        .info-section {
+          width: 370px;
+          margin-top: -20px;
+        }
+
+        .banner-label {
+          color: rgb(255, 255, 255, 0.8);
+          font-size: 0.8rem;
+          text-transform: uppercase;
+        }
+
+        .label {
+          color: rgb(0, 0, 0, 0.6);
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          margin-bottom: -10px;
+        }
+
+        .info {
+          color: #0097A7;
+          margin: 15px 0;
+        }
+
+        a {
+          color: #0097A7;
+          text-decoration: none;
+        }
+
+        a :hover {
+          text-decoration: underline;
+        }
+
+        .banner-info {
+          color: white;
+          font-size: 1rem;
+          margin-top: -10px;
+        }
+
+        #icons {
+          width: 55px;
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .banner-icon {
+          width: 25px;
+          opacity: 0.5;
+          cursor: pointer;
+        }
+
+        .banner-icon :hover {
+          opacity: 1;
+        }
+
+        .map-icon {
+          margin-top: 0;
+          margin-right: 10px;
+          width: 1.2rem;
+        }
+
+        .description {
+          margin-bottom: 30px;
+          font-size: 1.1rem;
+          line-height: 1.6rem;
+        }
+
+        @media (max-width: 1200px) {
+          .image-section {
+              width: 500px;
+          }
+        }
+
+        @media (max-width: 992px) {
+          .image-section {
+              width: 300px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .image-section {
+              width: 100%;
+          }
+
+          .info-section {
+            width: 100%;
+          }
+        }
+
 
 
           @media (min-width: 576px) {

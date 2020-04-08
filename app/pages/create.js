@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import { createActivity } from '../actions'
+import ImageUpload from '../components/imageUpload'
 
 const Create = (props) => {
 
   const defaultData = {
     name: '',
     description: '',
-    rating: '',
     image: '',
-    cover: '',
-    longDesc: ''
+    ageFrom: '',
+    ageTo: '',
+    price: '',
+    website: '',
+    userEmail: ''
   }
 
   const formData = defaultData
@@ -44,109 +47,268 @@ const Create = (props) => {
   }
 
 
+  const handleMediumChange = (event) => {
+    const { options } = event.target
+    const optionsLength = options.length
+    let value = []
+
+    for (let i = 0; i < optionsLength; i++) {
+      if (options[i].selected) {
+        value.push(options[i].value)
+      }
+    }
+
+    setForm({
+      ...form,
+      medium: value.toString()
+    })
+  }
+
+
+
+
+
   const submitForm = () => {
     createActivity({...form})
   }
 
   return (
+
+<>
+    <div className="contain top-space">
+      <div className="details-card">
+        <div className="card-header">
+          
+          <a href="/" id="back-btn">
+            <img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> 
+            <span className="back">BACK</span>
+          </a>
+        </div>
+
+        <div className="form-card-content">
+
+
+
+        <h1>Add an activity</h1>
+        
     <form>
-      <div className="form-group">
-        <label htmlFor="name">Name</label>
-        <input 
-        value={form.name}
-        onChange={handleChange}
-        type="text" 
-        className="form-control" 
-        id="name" 
-        name="name" 
-        aria-describedby="emailHelp" 
-        placeholder="Lord of the Rings" />
+    <div className="add-activity-form">
+      <div className="form-col">
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input 
+          value={form.name}
+          onChange={handleChange}
+          type="text" 
+          className="form-control" 
+          id="name" 
+          name="name" 
+          aria-describedby="emailHelp" 
+          placeholder="Activity name" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="image">Image</label>
+          <input 
+          onChange={handleChange}
+          value={form.image}
+          type="text" 
+          className="form-control" 
+          id="image" 
+          name="image" 
+          placeholder="http://....." />
+        </div>
+        <div className="form-group">
+          <label htmlFor="ageFrom">Age from</label>
+          <input 
+          onChange={handleChange}
+          value={form.ageFrom}
+          type="text" 
+          className="form-control" 
+          id="ageFrom" 
+          name="ageFrom" 
+          placeholder="age from" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="ageTo">Age to</label>
+          <input 
+          onChange={handleChange}
+          value={form.ageTo}
+          type="text" 
+          className="form-control" 
+          id="ageTo" 
+          name="ageTo" 
+          placeholder="age to" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="price">Price</label>
+          <input 
+          onChange={handleChange}
+          value={form.price}
+          type="text" 
+          className="form-control" 
+          id="price" 
+          name="price" 
+          placeholder="Price" />
+        </div>
+
+
+        <div className="form-group">
+          <label htmlFor="website">Website</label>
+          <input 
+          onChange={handleChange}
+          value={form.website}
+          type="text" 
+          className="form-control" 
+          id="website" 
+          name="website" 
+          placeholder="Website" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="userEmail">Email</label>
+          <input 
+          onChange={handleChange}
+          value={form.userEmail}
+          type="text" 
+          className="form-control" 
+          id="userEmail" 
+          name="userEmail" 
+          placeholder="Your Email Address" />
+        </div>
       </div>
+      <div className="form-col">
+
       <div className="form-group">
-        <label htmlFor="description">Description</label>
-        <input 
-        onChange={handleChange}
-        value={form.description}
-        type="text" 
-        className="form-control" 
-        id="description" 
-        name="description" 
-        placeholder="Somewhere in Middle-earth..." />
+          <label htmlFor="description">Description</label>
+          <textarea 
+          onChange={handleChange}
+          value={form.description}
+          className="form-control" 
+          id="description" 
+          name="description" 
+          rows="3"></textarea>
+        </div>
+
+
+        <div className="form-group">
+          <label htmlFor="category">Category</label>
+          <select 
+          onChange={handleCategoryChange}
+          multiple 
+          className="form-control" 
+          id="category"
+          name="category">
+            <option>Academic</option>
+            <option>Arts and crafts</option>
+            <option>Cooking</option>
+            <option>Games</option>
+            <option>Music and dance</option>
+            <option>Outdoor</option>
+            <option>Sport and fitness</option>
+          </select>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="medium">Medium</label>
+          <select 
+          onChange={handleMediumChange}
+          multiple 
+          className="form-control" 
+          id="medium"
+          name="medium">
+            <option>Website</option>
+            <option>Youtube</option>
+            <option>App</option>
+          </select>
+        </div>
+
+
+
       </div>
-      <div className="form-group">
-        <label htmlFor="description">Rating</label>
-        <input 
-        onChange={handleChange}
-        value={form.rating}
-        type="number" 
-        max="5" 
-        min="0" 
-        className="form-control" 
-        id="rating" 
-        name="rating" 
-        placeholder="3" />
-        <small id="emailHelp" className="form-text text-muted">Max: 5, Min: 0 </small>
       </div>
-      <div className="form-group">
-        <label htmlFor="image">Image</label>
-        <input 
-        onChange={handleChange}
-        value={form.image}
-        type="text" 
-        className="form-control" 
-        id="image" 
-        name="image" 
-        placeholder="http://....." />
-      </div>
-      <div className="form-group">
-        <label htmlFor="cover">Cover</label>
-        <input 
-        onChange={handleChange}
-        value={form.cover}
-        type="text" 
-        className="form-control" 
-        id="cover" 
-        name="cover" 
-        placeholder="http://......" />
-      </div>
-      <div className="form-group">
-        <label htmlFor="longDesc">Long Description</label>
-        <textarea 
-        onChange={handleChange}
-        value={form.longDesc}
-        className="form-control" 
-        id="longDesc" 
-        name="longDesc" 
-        rows="3"></textarea>
-      </div>
-      <div className="form-group">
-        <label htmlFor="category">Category</label>
-        <select 
-        onChange={handleCategoryChange}
-        multiple 
-        className="form-control" 
-        id="category"
-        name="category">
-          <option>Adventure Sports</option>
-          <option>Attractions</option>
-          <option>Art, Crafts and Cooking</option>
-          <option>Birthday Parties</option>
-          <option>Events</option>
-          <option>Holiday Camps</option>
-          <option>Parks and Skate Parks</option>
-          <option>Performing Arts</option>
-          <option>Play Centres</option>
-          <option>Sport and Games</option>
-          <option>Theme Parks and Water Parks</option>
-        </select>
-      </div>
+
       <button 
-        onClick={submitForm} 
-        type="button" 
-        className="btn btn-primary">
-        Add Activity
-      </button>
+          onClick={submitForm} 
+          type="button" 
+          className="btn btn-primary">
+          Add Activity
+        </button>
+
+
     </form>
+
+    <ImageUpload />
+
+
+</div>
+
+</div>
+</div>
+
+
+  <style jsx>{`
+    .form-card-content {
+      padding: 20px;
+    }
+
+    .add-activity-form {
+      margin: 50px 50px 0 50px;
+      display: flex;
+    }
+
+    .form-col {
+      flex: 1;
+    }
+
+    .form-group {
+      display: flex;
+
+    }
+
+    input:not([type="submit"]) {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      width: 300px;
+    }
+
+    select, textarea {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      width: 300px;
+    }
+
+    h1 {
+      margin-top: -35px;
+    }
+
+    label {
+      width: 120px;
+    }
+
+    button {
+      margin: 25px 0 25px 50px
+    }
+
+    #description {
+      height: 120px;
+    }
+
+    #category {
+      height: 155px;
+    }
+
+    #medium {
+      height: 80px;
+    }
+
+  `}</style>
+
+
+</>
   )
 }
 

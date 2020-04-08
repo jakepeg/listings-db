@@ -1,5 +1,5 @@
 const About = () => (
-  <h1>About Page</h1>
+  <button type="button" className="active">Suggest an activity</button>
 )
 
 export default About

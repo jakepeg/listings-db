@@ -6,7 +6,7 @@ import Card from '../components/card'
 
 const Home = (props) => {
 
-  const [ filter, setFilter ] = useState('All Activities')
+  const [ filter, setFilter ] = useState('All activities')
 
   const changeCategory = category => {
     setFilter(category)
@@ -14,11 +14,12 @@ const Home = (props) => {
 
   const filterActivities = activities => {
 
-    if (filter === 'All Activities') {
+    if (filter === 'All activities') {
       return activities
     }
 
     return activities.filter((a) => {
+      console.log(filter)
       return a.category && a.category.includes(filter)
     })
   }

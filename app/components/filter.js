@@ -5,7 +5,7 @@ import { CATEGORY_LIST } from '../actions';
 const Filter = (props) => {
 
   const onChange = value => {
-    console.log(value)
+    // console.log(value)
     props.changeCategory(value.label)
   };
 
@@ -16,7 +16,7 @@ const Filter = (props) => {
       classNamePrefix="react-select"
       onChange={onChange}
       options={CATEGORY_LIST}
-      placeholder="Discover amazing experiences"
+      placeholder="Discover fun activities"
       isSearchable={false}
     />
   );

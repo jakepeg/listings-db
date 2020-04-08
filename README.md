@@ -2,6 +2,13 @@
 
 ## Steps to run in Development Environment
 
+```
+# From root folder
+npm run dev
+```
+
+or do the following 2 steps
+
 ### Start API server
 
 (Start this first, or else you will get error when web app attempt to call API)

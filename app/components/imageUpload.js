@@ -32,7 +32,7 @@ function ImageUpload() {
       />
 
       {loading ? (
-        <h3>LOADING...</h3>
+        <h3>LOADING IMAGE...</h3>
       ) : (
         <img src={image} style={{width: '300px'}} />
       )}

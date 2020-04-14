@@ -9,7 +9,7 @@ npm run dev
 
 or do the following 2 steps
 
-### Start API server
+### 1. Start API server
 
 (Start this first, or else you will get error when web app attempt to call API)
 
@@ -21,7 +21,7 @@ npm run start
 
     API is availble on port 3001
 
-### Start NextJS App
+### 2. Start NextJS App
 
 ```
 cd app

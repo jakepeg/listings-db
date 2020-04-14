@@ -38,13 +38,15 @@ class Auth0 {
     Cookies.set('user', authResult.idTokenPayload)
     Cookies.set('jwt', authResult.idToken)
     Cookies.set('expiresAt', expiresAt)
-    console.log(Cookies.get('jwt'))
+    Cookies.set('sub', authResult.idTokenPayload.sub)
+    console.log(authResult.idTokenPayload)
   }
 
   logout() {
     Cookies.remove('user')
     Cookies.remove('jwt')
     Cookies.remove('expiresAt')
+    Cookies.remove('sub')
 
     this.auth0.logout({
       returnTo: '',

@@ -27,19 +27,21 @@ const Nav = () => {
       {/* <button type="button" className="active">Discover</button> */}
       {/* <button type="button">My Classes</button> */}
       {/* <button type="button">My Points</button> */}
+
+      { auth0.isAuthenticated() &&
+
+<>
       <Link href="/create">
         <button type="button" className="cta">Add activity</button>
       </Link>
 
+      <Logout />
+</>
+      }
+
       { auth0.isAuthenticated() === false &&
         <Login />
       }
-      { auth0.isAuthenticated() &&
-        <>
-        <Logout />
-        </>
-      }
-
       </div>
     </header>
     <style jsx>{`

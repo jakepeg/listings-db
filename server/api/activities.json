@@ -78,20 +78,7 @@
     "userEmail": "jakepeg@gmail.com"
   },
   {
-    "name": "Jacob Kemsley",
-    "description": "asdkasjdlaksjd",
-    "image": "https://m.media-amazon.com/images/M/MV5BNjQ2NDA3MDcxMF5BMl5BanBnXkFtZTgwMjE5NTU0NzE@._V1_CR0,60,640,360_AL_UX477_CR0,0,477,268_AL_.jpg",
-    "ageFrom": "1",
-    "ageTo": "15",
-    "price": "Free",
-    "website": "http://www.ClasseApp.com",
-    "userEmail": "jakepeg@gmail.com",
-    "category": "Games",
-    "medium": "Nutter",
-    "id": "mgncoal"
-  },
-  {
-    "name": "Jacob Kemsley",
+    "name": "The Dad Lab",
     "description": "My name is Sergei and I am a full-time dad to two adorable boys: Alex and Max. We love educational toys, toys for kids that help to learn while children are just playing with them: building sets, wooden toys, activity books. We love doing easy crafts, fun kids activities, and kids science experiments that any parent can do at home. ",
     "image": "https://cl.ly/43d0b5ab2a6f/71069950_1012627365745715_596608654342356992_o.jpg",
     "ageFrom": "4",
@@ -103,92 +90,16 @@
     "id": "50ze3ii"
   },
   {
-    "name": "Jacob Kemsley",
-    "description": "dskjhdsfkjhsdfkjshdfsdlkjhf",
-    "image": "https://m.media-amazon.com/images/M/MV5BNjQ2NDA3MDcxMF5BMl5BanBnXkFtZTgwMjE5NTU0NzE@._V1_CR0,60,640,360_AL_UX477_CR0,0,477,268_AL_.jpg",
-    "ageFrom": "7",
-    "ageTo": "9",
-    "price": "9.158,24",
-    "website": "http://www.ClasseApp.com",
-    "userEmail": "jakepeg@gmail.com",
-    "category": "Arts and crafts",
-    "medium": "Website",
-    "id": "bvo0c75"
-  },
-  {
-    "name": "Elodie Walmsley",
-    "description": "iuhiuhiuhhhhhh",
-    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1586436885/doozone/ickitt8ul3nmoxqzsgxp.jpg",
-    "ageFrom": "7",
-    "ageTo": "8",
-    "price": "87",
-    "website": "http://www.ClasseApp.com",
-    "userEmail": "jakepeg@gmail.com",
-    "category": "Arts and crafts",
-    "medium": "Youtube",
-    "id": "zphhuel"
-  },
-  {
-    "name": "Jacob Kemsley",
-    "description": "lkjlkjlkj",
-    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1586857152/doozone/uuyl8w2wqrsf0vmhgy27.jpg",
-    "ageFrom": "0",
-    "ageTo": "100",
-    "price": "free",
-    "website": "http://www.ClasseApp.com",
-    "userEmail": "jakepeg@gmail.com",
-    "category": "Arts and crafts",
-    "medium": "App",
-    "id": "heye13r"
-  },
-  {
-    "name": "testing",
-    "description": "okok",
-    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1586869718/doozone/zu94htqgswxr70tlvw23.jpg",
-    "ageFrom": "0",
-    "ageTo": "7",
-    "price": "90",
-    "website": "http://www.ClasseApp.com",
+    "name": "Learn to Breakdance",
+    "description": "Have you ever been interested in learning how to dance? VincaniTV provides dance videos to help inspire you and dance tutorials to help support your journey. Click on a tutorial and start learning today!",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1586943020/doozone/e3wcap2yttixiadoycgy.jpg",
+    "ageFrom": "2",
+    "ageTo": "22",
+    "price": "Free",
+    "website": "https://www.youtube.com/channel/UCh_S_EgAc6bAdu8C9aaqz1w",
     "userId": "google-oauth2|101810273024241340954",
-    "category": "Arts and crafts",
+    "category": "Music and dance",
     "medium": "Youtube",
-    "id": "ccizp61"
-  },
-  {
-    "name": "",
-    "description": "",
-    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1586870331/doozone/coazd43h2dixkjme86to.jpg",
-    "ageFrom": "",
-    "ageTo": "",
-    "price": "",
-    "website": "",
-    "userId": "google-oauth2|101810273024241340954",
-    "id": "y08z3rh"
-  },
-  {
-    "name": "tee4y.com",
-    "description": "kjk",
-    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1586889800/doozone/acg7lzwlmpoafhxfoyba.jpg",
-    "ageFrom": "0",
-    "ageTo": "9",
-    "price": "90",
-    "website": "http://www.ClasseApp.com",
-    "userId": "auth0|5e957f179e56f10c074eb166",
-    "category": "Academic",
-    "medium": "Youtube",
-    "id": "yw4092r"
-  },
-  {
-    "name": "lkjlkj",
-    "description": "lkjh",
-    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1586889965/doozone/s7ik64bmiwibzk12ecxe.jpg",
-    "ageFrom": "9",
-    "ageTo": "99",
-    "price": "0",
-    "website": "http://www.ClasseApp.com",
-    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
-    "category": "Arts and crafts",
-    "medium": "Website",
-    "id": "fnmb62i"
+    "id": "8ph97n2"
   }
 ]

@@ -2,6 +2,7 @@
 import { useRouter } from 'next/router'
 import { getActivityById, deleteActivity } from '../../../actions'
 import Link from 'next/link'
+import Cookies from 'js-cookie'
 
 const DetailPage = (props) => {
   const router = useRouter()
@@ -10,7 +11,7 @@ const DetailPage = (props) => {
 
   const handleDelete = (id) => {
     deleteActivity(id).then(() => {
-      router.push('/')
+      router.push('/my-activities')
     })
   }
 
@@ -24,8 +25,6 @@ const DetailPage = (props) => {
             <span className="back">BACK</span>
           </a>
         </div>
-
-
 
         <div className="card-content">
 
@@ -57,7 +56,7 @@ const DetailPage = (props) => {
               </span>
             }
 
-            {/* <p className="info">
+            <p className="info">
             <img className="map-icon" src="/share.svg" alt="Share" />
             Share with friends
             </p>
@@ -65,7 +64,7 @@ const DetailPage = (props) => {
             <p className="info">
             <img className="map-icon" src="/favorite.svg" alt="Add to favorites" />
             Add to favorites
-            </p> */}
+            </p>
 
             {activity.website.length > 0 &&
               <span>
@@ -80,21 +79,16 @@ const DetailPage = (props) => {
           </div>
           <img className="image-section" src={activity.image} alt={activity.name} />
         
-        {/* <button onClick={() => handleDelete(id)} href="#" role="button">Delete</button>
-        <Link href="/activities/[id]/edit" as={`/activities/${id}/edit`}>
-          <button 
-          role="button">Edit</button>
-        </Link> */}
         </div>
-
+        {activity.userId === Cookies.get('sub') &&
+            <>
+              <button className="delete-button" onClick={() => handleDelete(id)} href="#" role="button">Delete</button>
+              <Link href="/activities/[id]/edit" as={`/activities/${id}/edit`}>
+                <button className="edit-button" role="button">Edit</button>
+              </Link>
+            </>
+          }
       </div>
-
-      <style jsx>{`
-
-
-
-
-      `}</style>
     </div>
   )
 }

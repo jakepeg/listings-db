@@ -13,6 +13,7 @@ class Auth0 {
     });
 
     this.login = this.login.bind(this);
+    this.loginAddActivity = this.loginAddActivity.bind(this);
     this.logout = this.logout.bind(this);
     this.handleAuthentication = this.handleAuthentication.bind(this);
     this.isAuthenticated = this.isAuthenticated.bind(this);
@@ -47,6 +48,7 @@ class Auth0 {
     Cookies.remove('jwt')
     Cookies.remove('expiresAt')
     Cookies.remove('sub')
+    Cookies.remove('returnURL')
 
     this.auth0.logout({
       returnTo: '',
@@ -55,7 +57,12 @@ class Auth0 {
   }
 
   login() {
-    console.log('login clicked')
+    Cookies.set('returnURL', '/')
+    this.auth0.authorize()
+  }
+
+  loginAddActivity() {
+    Cookies.set('returnURL', '/create')
     this.auth0.authorize()
   }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Router from 'next/router'
-import AddActivityForm from '../../../components/addActivityForm'
+import Edit from '../../../components/edit'
 import { getActivityById, updateActivity } from '../../../actions'
 
 class EditActivity extends React.Component {
@@ -20,8 +20,7 @@ class EditActivity extends React.Component {
     const { activity } = this.props
     return (
       <div className="container">
-        <h1>Edit Activity</h1>
-        <AddActivityForm 
+        <Edit 
         submitButton="Update"
         initialData={activity} 
         handleFormSubmit={this.HandleUpdateActivity} />

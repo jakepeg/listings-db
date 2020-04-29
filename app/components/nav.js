@@ -1,10 +1,16 @@
 import Link from 'next/link'
 import auth0 from '../services/auth0'
-// import SideDrawer from './drawer'
+// import SideMenu from './sideMenu'
 
 const Login = () => {
   return (
-    <button type="button" onClick={auth0.login}>Sign n</button>
+    <button type="button" onClick={auth0.login}>Login</button>
+  )
+}
+
+const LoginAddActivity = () => {
+  return (
+    <button type="button" className="cta" onClick={auth0.loginAddActivity}>Add activity</button>
   )
 }
 
@@ -35,13 +41,25 @@ const Nav = () => {
         <button type="button" className="cta">Add activity</button>
       </Link>
 
+      <Link href="/my-activities">
+        <button type="button">My activities</button>
+      </Link>
+
       <Logout />
+
+      {/* <SideMenu /> */}
 </>
       }
 
       { auth0.isAuthenticated() === false &&
+      <>
+        <LoginAddActivity />
         <Login />
+    </>
       }
+
+
+
       </div>
     </header>
     <style jsx>{`

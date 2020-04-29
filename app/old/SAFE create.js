@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { createActivity } from '../actions'
-import ImageUpload from '../components/imageUpload'
+import Cookies from 'js-cookie'
 
 const Create = (props) => {
 
@@ -12,7 +12,7 @@ const Create = (props) => {
     ageTo: '',
     price: '',
     website: '',
-    userEmail: ''
+    userId: Cookies.get('sub')
   }
 
   const formData = defaultData
@@ -64,13 +64,37 @@ const Create = (props) => {
     })
   }
 
-
-
-
-
   const submitForm = () => {
     createActivity({...form})
   }
+
+
+    const [image, setImage] = useState('')
+    const [loading, setLoading] = useState(false)
+    const uploadImage = async e => {
+      const files = e.target.files
+      const data = new FormData()
+      data.append('file', files[0])
+      data.append('upload_preset', 'doozone')
+      setLoading(true)
+      const res = await fetch(
+        'https://api.cloudinary.com/v1_1/jakepeg/image/upload',
+        {
+          method: 'POST',
+          body: data
+        }
+      )
+      const file = await res.json()
+  
+      setImage(file.secure_url)
+      setLoading(false)
+      setForm({
+        ...form,
+        image: file.secure_url
+      })
+    }
+
+
 
   return (
 
@@ -106,7 +130,7 @@ const Create = (props) => {
           aria-describedby="emailHelp" 
           placeholder="Activity name" />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="image">Image</label>
           <input 
           onChange={handleChange}
@@ -116,7 +140,8 @@ const Create = (props) => {
           id="image" 
           name="image" 
           placeholder="http://....." />
-        </div>
+        </div> */}
+
         <div className="form-group">
           <label htmlFor="ageFrom">Age from</label>
           <input 
@@ -165,15 +190,24 @@ const Create = (props) => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="userEmail">Email</label>
+          <label htmlFor="file">Image</label>
           <input 
-          onChange={handleChange}
-          value={form.userEmail}
-          type="text" 
-          className="form-control" 
-          id="userEmail" 
-          name="userEmail" 
-          placeholder="Your Email Address" />
+            type="file"
+            name="file"
+            placeholder="Upload an image"
+            onChange={uploadImage}
+          />
+          <input value={form.userId}
+          type="hidden" 
+          id="userId" 
+          name="userId" />
+        </div>
+        <div className="form-group">
+          {loading ? (
+            <h3>LOADING IMAGE...</h3>
+          ) : (
+            <img src={image} style={{width: '150px'}} />
+          )}
         </div>
       </div>
       <div className="form-col">
@@ -236,8 +270,6 @@ const Create = (props) => {
 
 
     </form>
-
-    <ImageUpload />
 
 
 </div>

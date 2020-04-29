@@ -146,13 +146,10 @@ class ActivityApp extends App {
             margin-left: auto;
           }
 
-
-
           .react-select-container {
             margin: 20px 0 20px 20px;
             
           }
-
 
           .react-select-container:focus {
             outline: none;
@@ -335,6 +332,20 @@ class ActivityApp extends App {
           margin-bottom: 30px;
           font-size: 1.1rem;
           line-height: 1.6rem;
+        }
+
+        .edit-button {
+          margin-bottom: 20px;
+        }
+
+        .delete-button {
+          color: red;
+          border: 1px solid red;
+        }
+
+        .menu-item {
+          width: 100%;
+          margin-bottom: 20px;
         }
 
         @media (max-width: 1200px) {

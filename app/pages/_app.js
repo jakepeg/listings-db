@@ -19,6 +19,12 @@ class ActivityApp extends App {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
           />
+
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
+          />
+
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
@@ -102,6 +108,14 @@ class ActivityApp extends App {
             font-weight: 400;
             font-size: .9rem;
             padding: 7px 15px;
+          }
+
+          .nav-link {
+            font-family: 'Paytone One', sans-serif;
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-left: 15px;
+            cursor: pointer;
           }
 
           .top-space {

@@ -4,7 +4,8 @@ import auth0 from '../services/auth0'
 
 const Login = () => {
   return (
-    <button type="button" onClick={auth0.login}>Login</button>
+    // <button type="button" onClick={auth0.login}>Login</button>
+    <span className="nav-link" onClick={auth0.login}>SIGN IN</span>
   )
 }
 
@@ -16,7 +17,8 @@ const LoginAddActivity = () => {
 
 const Logout = () => {
   return (
-    <button type="button" onClick={auth0.logout}>Logout</button>
+    // <button type="button" onClick={auth0.logout}>Logout</button>
+    <span className="nav-link" onClick={auth0.logout}>LOGOUT</span>
   )
 }
 
@@ -29,6 +31,7 @@ const Nav = () => {
       <a><img id="logo" src="/logo.svg" alt="DooZone logo" /></a>
     </Link>
       {/* <span className="tagline">fun things to doo (at home)</span> */}
+      {/* <span className="tagline">only boring people get bored</span> */}
       <div id="menu">
       {/* <button type="button" className="active">Discover</button> */}
       {/* <button type="button">My Classes</button> */}
@@ -38,11 +41,13 @@ const Nav = () => {
 
 <>
       <Link href="/create">
-        <button type="button" className="cta">Add activity</button>
+        {/* <button type="button" className="cta">Add activity</button> */}
+        <span className="nav-link">ADD ACTIVITY</span>
       </Link>
 
       <Link href="/my-activities">
-        <button type="button">My activities</button>
+        {/* <button type="button">My activities</button> */}
+        <span className="nav-link">MY ACTIVITIES</span>
       </Link>
 
       <Logout />
@@ -53,8 +58,8 @@ const Nav = () => {
 
       { auth0.isAuthenticated() === false &&
       <>
-        <LoginAddActivity />
         <Login />
+        <LoginAddActivity />
     </>
       }
 

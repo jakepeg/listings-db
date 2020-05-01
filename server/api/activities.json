@@ -10,6 +10,7 @@
     "ageTo": "99",
     "price": "Free",
     "website": "www.youtube.com/playlist?list=PLyCLoPd4VxBvQafyve889qVcPxYEjdSTl",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "userEmail": "jakepeg@gmail.com"
   },
   {
@@ -23,6 +24,7 @@
     "ageTo": "7",
     "price": "$1",
     "website": "www.teachyourmonstertoread.com/",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "userEmail": "jakepeg@gmail.com"
   },
   {
@@ -36,6 +38,7 @@
     "ageTo": "14",
     "price": "Free",
     "website": "little.fooby.ch/en.html",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "userEmail": "jakepeg@gmail.com"
   },
   {
@@ -49,6 +52,7 @@
     "ageTo": "18",
     "price": "Free",
     "website": "www.twinkl.ch",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "userEmail": "jakepeg@gmail.com"
   },
   {
@@ -62,7 +66,7 @@
     "ageTo": "14",
     "price": "£5.99 month",
     "website": "www.doodlemaths.com",
-    "userId": "google-oauth2|101810273024241340954",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "userEmail": "jakepeg@gmail.com"
   },
   {
@@ -76,7 +80,7 @@
     "ageTo": "99",
     "price": "Free",
     "website": "www.youtube.com/watch?v=JZmmOdnljG4",
-    "userId": "google-oauth2|101810273024241340954",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "userEmail": "jakepeg@gmail.com"
   },
   {
@@ -87,35 +91,88 @@
     "ageTo": "14",
     "price": "Free",
     "website": "www.thedadlab.com",
-    "userId": "google-oauth2|101810273024241340954",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "userEmail": "jakepeg@gmail.com",
     "category": "Academic",
-    "id": "50ze3ii"
+    "id": "50ze3ii",
+    "medium": "Website"
   },
   {
-    "name": "Jake Kemsley",
-    "description": "oiuoiuoiuoiuoiu",
-    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1587971042/doozone/vlwwydg9vhmhumrpfyyw.jpg",
-    "ageFrom": "0",
-    "ageTo": "9",
-    "price": "0",
-    "website": "http://www.ClasseApp.com",
-    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
-    "category": "Arts and crafts",
-    "medium": "Website",
-    "id": "6pxepxv"
-  },
-  {
-    "name": "Activity XXX",
-    "description": "this is the description",
-    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1588076994/doozone/ciimht7z1arm4kh6f9hf.jpg",
-    "ageFrom": "6",
-    "ageTo": "14",
+    "name": "BBC Bitesize",
+    "description": "Bitesize is the BBC's free online study support resource for school-age pupils in the United Kingdom. It is designed to aid pupils in both schoolwork and, for older pupils, exams. Subjects include Art and Design, Computing, Design and Technology, English, Geography, History, Maths, Music, Physical Education, Religious Education, Science, and Modern Foreign Languages.",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1588230303/doozone/vdsqyhtmhtpb4wuthp3p.png",
+    "ageFrom": "5",
+    "ageTo": "18",
     "price": "Free",
-    "website": "http://www.ClasseApp.com",
+    "website": "https://www.bbc.co.uk/bitesize",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
+    "category": "Academic",
+    "medium": "Website",
+    "id": "g1ft6zr"
+  },
+  {
+    "name": "Code Kingdoms",
+    "description": "Code your own Minecraft and Roblox games, and learn crucial coding skills the fun way!\n\nUse our beginner-friendly code editor and video courses to write real Java and Lua code. Switch from drag-and-drop to text mode at any time. Share your creations and play with your friends.\n\nTake Minecraft and Roblox to the next level with the power of code!",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1588230893/doozone/kk0nqemmcl4973tehz05.png",
+    "ageFrom": "8",
+    "ageTo": "14",
+    "price": "$14.99 mo",
+    "website": "https://codekingdoms.com",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
+    "category": "Academic,Games",
+    "medium": "App",
+    "id": "567nx7r"
+  },
+  {
+    "name": "Cosmic Kids Yoga",
+    "description": "Yoga, mindfulness and relaxation designed specially for kids aged 3+, used in schools and homes all over the world.",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1588231433/doozone/pqq25qs1y1lfkmyd8nhj.jpg",
+    "ageFrom": "3",
+    "ageTo": "12",
+    "price": "Free",
+    "website": "https://www.youtube.com/user/CosmicKidsYoga",
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Sport and fitness",
-    "medium": "App",
-    "id": "5x4hkgp"
+    "medium": "Youtube",
+    "id": "eu1nh9v"
+  },
+  {
+    "name": "Fitness Blender",
+    "description": "600+ workout videos for every fitness level. ",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1588250989/doozone/pdxfr1lnywvwlh3piz5n.jpg",
+    "ageFrom": "13",
+    "ageTo": "99",
+    "price": "Free",
+    "website": "https://www.fitnessblender.com/",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
+    "medium": "Website",
+    "category": "Sport and fitness",
+    "id": "uxrv1ol"
+  },
+  {
+    "name": "Cook With Amber",
+    "description": "Amber Kelley is a teen cookbook author, speaker, winner of Food Network Star Kids, and the host of her popular Youtube series Cook With Amber. From her appearances on The Disney Channel, E!, and the Today Show, to her endorsement from Jamie Oliver, Amber is inspiring a whole new generation of eaters to get in the kitchen and have fun.",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1588253254/doozone/klanxllnj5hblnqtwvlu.jpg",
+    "ageFrom": "5",
+    "ageTo": "18",
+    "price": "Free",
+    "website": "https://www.youtube.com/user/CookWithAmber",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
+    "category": "Cooking",
+    "medium": "Youtube",
+    "id": "fcy0cua"
+  },
+  {
+    "name": "Easy Peasy Fun",
+    "description": "Creating and sharing ideas for fun activities and crafts for kids (and kids at heart).",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1588254132/doozone/mhwgufd8aytp0kvkydzn.jpg",
+    "ageFrom": "2",
+    "ageTo": "8",
+    "price": "Free",
+    "website": "https://www.youtube.com/channel/UC3gFIMCLhcZkEOhbGOdDl9w/",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
+    "category": "Arts and crafts",
+    "medium": "Youtube",
+    "id": "ry4hexh"
   }
 ]

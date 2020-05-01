@@ -15,7 +15,7 @@ const ActivityList = (props) => {
                   <h2>{activity.name}</h2>
                   <div className="card-footer">
                     <div className="age-range">{'age ' + activity.ageFrom + ' - ' + activity.ageTo}</div>
-                    <div className="location">{activity.category} - {activity.medium}</div>
+                    <div className="location">{activity.category} - <span className={activity.medium}>{activity.medium}</span></div>
                   </div>
                 </div>
                 </div>
@@ -67,6 +67,19 @@ const ActivityList = (props) => {
         .close {
           margin-bottom: -150px;
         }
+
+        .Website {
+          color: Teal;
+        }
+
+        .App {
+          color: DodgerBlue;
+        }
+
+        .Youtube {
+          color: FireBrick;
+        }
+
       `}</style>
     </>
   )

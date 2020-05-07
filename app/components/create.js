@@ -20,9 +20,57 @@ const Create = (props) => {
 
   // const formData = defaultData
   const formData = props.initialData ? {...props.initialData} : defaultData
-
-
   const [form, setForm] = useState(formData)
+
+  const [nameError, setNameError] = useState(false)
+  const [descriptionError, setDescriptionError] = useState(false)
+  const [imageError, setImageError] = useState(false)
+  const [ageFromError, setAgeFromError] = useState(false)
+  const [ageToError, setAgeToError] = useState(false)
+  const [priceError, setPriceError] = useState(false)
+  const [websiteError, setWebsiteError] = useState(false)
+  const [categoryError, setCategoryError] = useState(false)
+  const [mediumError, setMediumError] = useState(false)
+
+  const validate = () => {
+    if (!form.name) {
+      setNameError(true)
+      return false
+    }
+    if (!form.ageFrom) {
+      setAgeFromError(true)
+      return false
+    }
+    if (!form.ageTo) {
+      setAgeToError(true)
+      return false
+    }
+    if (!form.price) {
+      setPriceError(true)
+      return false
+    }
+    if (!form.website) {
+      setWebsiteError(true)
+      return false
+    }
+    if (!form.image) {
+      setImageError(true)
+      return false
+    }
+    if (!form.description) {
+      setDescriptionError(true)
+      return false
+    }
+    if (!form.category) {
+      setCategoryError(true)
+      return false
+    }
+    if (!form.medium) {
+      setMediumError(true)
+      return false
+    }
+    return true
+  }
 
   const handleChange = (event) => {
     const target = event.target
@@ -31,6 +79,18 @@ const Create = (props) => {
     setForm({
       ...form,
       [name]: target.value
+    })
+  }
+
+  const handleWebsiteChange = (event) => {
+    const target = event.target
+    const name = target.name
+    const cleanWebsite = target.value.replace('https://','').replace('http://','');
+    console.log(target)
+
+    setForm({
+      ...form,
+      [name]: cleanWebsite
     })
   }
 
@@ -69,9 +129,12 @@ const Create = (props) => {
   }
 
   const submitForm = () => {
-    createActivity({...form}).then(() => {
-      router.push('/my-activities')
-    })
+    const isValid = validate()
+    if (isValid) {
+      createActivity({...form}).then(() => {
+        router.push('/my-activities')
+      })
+    }
   }
 
     const [image, setImage] = useState('')
@@ -129,8 +192,12 @@ const Create = (props) => {
           className="form-control" 
           id="name" 
           name="name" 
+          required
           aria-describedby="emailHelp" 
           placeholder="Activity name" />
+          { nameError ? (
+            <div className="form-error">enter a name</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -138,11 +205,15 @@ const Create = (props) => {
           <input 
           onChange={handleChange}
           value={form.ageFrom}
-          type="text" 
+          type="number" 
           className="form-control" 
           id="ageFrom" 
           name="ageFrom" 
+          required
           placeholder="age from" />
+          { ageFromError ? (
+            <div className="form-error">enter age from</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -150,11 +221,15 @@ const Create = (props) => {
           <input 
           onChange={handleChange}
           value={form.ageTo}
-          type="text" 
+          type="number" 
           className="form-control" 
           id="ageTo" 
           name="ageTo" 
+          required
           placeholder="age to" />
+          { ageToError ? (
+            <div className="form-error">enter age to</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -166,19 +241,27 @@ const Create = (props) => {
           className="form-control" 
           id="price" 
           name="price" 
+          required
           placeholder="Price" />
+          { priceError ? (
+            <div className="form-error">enter a price</div>
+          ) : null }
         </div>
 
         <div className="form-group">
           <label htmlFor="website">Website</label>
           <input 
-          onChange={handleChange}
+          onChange={handleWebsiteChange}
           value={form.website}
           type="text" 
           className="form-control" 
           id="website" 
           name="website" 
+          required
           placeholder="Website" />
+          { websiteError ? (
+            <div className="form-error">enter website</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -186,9 +269,13 @@ const Create = (props) => {
           <input 
             type="file"
             name="file"
+            required
             placeholder="Upload an image"
             onChange={uploadImage}
           />
+          { imageError ? (
+            <div className="form-error">provide an image</div>
+          ) : null }
           <input value={form.userId}
           type="hidden" 
           id="userId" 
@@ -213,7 +300,11 @@ const Create = (props) => {
           className="form-control" 
           id="description" 
           name="description" 
+          required
           rows="3"></textarea>
+          { descriptionError ? (
+            <div className="form-error">enter a description</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -221,6 +312,7 @@ const Create = (props) => {
           <select 
           onChange={handleCategoryChange}
           multiple 
+          required
           className="form-control" 
           id="category"
           name="category">
@@ -232,13 +324,17 @@ const Create = (props) => {
             <option>Outdoor</option>
             <option>Sport and fitness</option>
           </select>
+          { categoryError ? (
+            <div className="form-error">select a category</div>
+          ) : null }
         </div>
 
         <div className="form-group">
-          <label htmlFor="medium">Medium</label>
+          <label htmlFor="medium">Channel</label>
           <select 
           onChange={handleMediumChange}
           multiple 
+          required
           className="form-control" 
           id="medium"
           name="medium">
@@ -246,6 +342,9 @@ const Create = (props) => {
             <option>Youtube</option>
             <option>App</option>
           </select>
+          { mediumError ? (
+            <div className="form-error">select a channel</div>
+          ) : null }
         </div>
 
       </div>
@@ -282,6 +381,13 @@ const Create = (props) => {
     .form-group {
       display: flex;
 
+    }
+
+    .form-error {
+      width: 60px;
+      color: red;
+      font-size: 0.7rem;
+      padding: 3px 0 0 3px;
     }
 
     input:not([type="submit"]) {

@@ -102,12 +102,12 @@ class ActivityApp extends App {
 
           .cta {
             background-color: #e50273;
-            border: 1px solid white;
+            border: 2px solid white;
             color: white;
             letter-spacing: 2px;
-            font-weight: 400;
+            font-weight: 600;
             font-size: .9rem;
-            padding: 7px 15px;
+            padding: 5px 10px;
           }
 
           .nav-link {

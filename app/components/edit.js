@@ -17,9 +17,57 @@ const Edit = (props) => {
   }
 
   const formData = props.initialData ? {...props.initialData} : defaultData
-
-
   const [form, setForm] = useState(formData)
+
+  const [nameError, setNameError] = useState(false)
+  const [descriptionError, setDescriptionError] = useState(false)
+  // const [imageError, setImageError] = useState(false)
+  const [ageFromError, setAgeFromError] = useState(false)
+  const [ageToError, setAgeToError] = useState(false)
+  const [priceError, setPriceError] = useState(false)
+  const [websiteError, setWebsiteError] = useState(false)
+  const [categoryError, setCategoryError] = useState(false)
+  const [mediumError, setMediumError] = useState(false)
+
+  const validate = () => {
+    if (!form.name) {
+      setNameError(true)
+      return false
+    }
+    if (!form.ageFrom) {
+      setAgeFromError(true)
+      return false
+    }
+    if (!form.ageTo) {
+      setAgeToError(true)
+      return false
+    }
+    if (!form.price) {
+      setPriceError(true)
+      return false
+    }
+    if (!form.website) {
+      setWebsiteError(true)
+      return false
+    }
+    // if (!form.image) {
+    //   setImageError(true)
+    //   return false
+    // }
+    if (!form.description) {
+      setDescriptionError(true)
+      return false
+    }
+    if (!form.category) {
+      setCategoryError(true)
+      return false
+    }
+    if (!form.medium) {
+      setMediumError(true)
+      return false
+    }
+    return true
+  }
 
   const handleChange = (event) => {
     const target = event.target
@@ -82,8 +130,15 @@ const Edit = (props) => {
   //   })
   // }
 
+  // const submitForm = () => {
+  //   props.handleFormSubmit({...form})
+  // }
+
   const submitForm = () => {
-    props.handleFormSubmit({...form})
+    const isValid = validate()
+    if (isValid) {
+      props.handleFormSubmit({...form})
+    }
   }
 
     const [image, setImage] = useState('')
@@ -144,6 +199,9 @@ const Edit = (props) => {
           name="name" 
           aria-describedby="emailHelp" 
           placeholder="Activity name" />
+          { nameError ? (
+            <div className="form-error">enter a name</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -156,6 +214,9 @@ const Edit = (props) => {
           id="ageFrom" 
           name="ageFrom" 
           placeholder="age from" />
+          { ageFromError ? (
+            <div className="form-error">enter age from</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -168,6 +229,9 @@ const Edit = (props) => {
           id="ageTo" 
           name="ageTo" 
           placeholder="age to" />
+          { ageToError ? (
+            <div className="form-error">enter age to</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -180,6 +244,9 @@ const Edit = (props) => {
           id="price" 
           name="price" 
           placeholder="Price" />
+          { priceError ? (
+            <div className="form-error">enter a price</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -192,6 +259,9 @@ const Edit = (props) => {
           id="website" 
           name="website" 
           placeholder="Website" />
+          { websiteError ? (
+            <div className="form-error">enter a website</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -235,6 +305,9 @@ const Edit = (props) => {
           id="description" 
           name="description" 
           rows="3"></textarea>
+          { descriptionError ? (
+            <div className="form-error">enter a description</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -254,6 +327,9 @@ const Edit = (props) => {
             <option>Outdoor</option>
             <option>Sport and fitness</option>
           </select>
+          { categoryError ? (
+            <div className="form-error">select a category</div>
+          ) : null }
         </div>
 
         <div className="form-group">
@@ -269,6 +345,9 @@ const Edit = (props) => {
             <option>Youtube</option>
             <option>App</option>
           </select>
+          { mediumError ? (
+            <div className="form-error">select a channel</div>
+          ) : null }
         </div>
 
       </div>
@@ -304,7 +383,13 @@ const Edit = (props) => {
 
     .form-group {
       display: flex;
+    }
 
+    .form-error {
+      width: 60px;
+      color: red;
+      font-size: 0.7rem;
+      padding: 3px 0 0 3px;
     }
 
     input:not([type="submit"]) {

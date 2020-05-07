@@ -86,7 +86,7 @@
   {
     "name": "The Dad Lab",
     "description": "My name is Sergei and I am a full-time dad to two adorable boys: Alex and Max. We love educational toys, toys for kids that help to learn while children are just playing with them: building sets, wooden toys, activity books. We love doing easy crafts, fun kids activities, and kids science experiments that any parent can do at home. ",
-    "image": "https://cl.ly/43d0b5ab2a6f/71069950_1012627365745715_596608654342356992_o.jpg",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1588837662/doozone/umooeqyy4a5edxzfd2eu.jpg",
     "ageFrom": "4",
     "ageTo": "14",
     "price": "Free",
@@ -174,5 +174,18 @@
     "category": "Arts and crafts",
     "medium": "Youtube",
     "id": "ry4hexh"
+  },
+  {
+    "name": "London Art College",
+    "description": "Students set their own timetable and decide when they are ready to submit work to the College - you can enrol and start your course whenever you wish.  You can study around your work and family commitments at times that suit you. Our art courses can be done either via the post or online - either way we endeavour to make it as simple as possible for you.\n\nAll of our art courses are specially designed for home study, allowing students to work at their own pace in the comfort of their own home.  We have students from over over 75 countries studying with us online - there is no college attendance. We believe that painting and drawing skills can be acquired by anyone – with proper tuition and practice.",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1588506545/doozone/owuvgkd8hdwtzjnnrfvs.jpg",
+    "ageFrom": "7",
+    "ageTo": "99",
+    "price": "Free",
+    "website": "www.londonart",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
+    "category": "Arts and crafts",
+    "medium": "Website",
+    "id": "57z5oko"
   }
 ]

@@ -46,7 +46,7 @@ class Auth0 {
     Cookies.remove('expiresAt')
 
     this.auth0.logout({
-      returnTo: '',
+      returnTo: 'https://discoverdoo.com',
       clientID: '6w0luoKEKUH4QLOImluA81kNf3jLmWbr'
     })
   }

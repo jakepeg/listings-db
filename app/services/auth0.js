@@ -58,12 +58,12 @@ class Auth0 {
   }
 
   login() {
-    Cookies.set('returnURL', '/')
+    Cookies.set('returnURL', 'https://discoverdoo.com/')
     this.auth0.authorize()
   }
 
   loginAddActivity() {
-    Cookies.set('returnURL', '/create')
+    Cookies.set('returnURL', 'https://discoverdoo.com/create')
     this.auth0.authorize()
   }
 

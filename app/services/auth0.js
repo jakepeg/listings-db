@@ -28,7 +28,7 @@ class Auth0 {
           resolve();
         } else if (err) {
           reject(err);
-          // console.log(err);
+          console.log(err);
         }
       });
     })

@@ -7,7 +7,8 @@ class Callback extends React.Component {
 
   async componentDidMount() {
     await auth0Client.handleAuthentication();
-    this.props.router.push(Cookies.get('returnURL'))
+    // this.props.router.push(Cookies.get('returnURL'))
+    this.props.router.push('https://discoverdoo.com/')
   }
 
   render() {

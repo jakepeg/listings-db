@@ -7,7 +7,8 @@ class Auth0 {
     this.auth0 = new auth0.WebAuth({
       domain: 'jakepeg.eu.auth0.com',
       clientID: '6w0luoKEKUH4QLOImluA81kNf3jLmWbr',
-      redirectUri: 'http://localhost:3000/callback',
+      // redirectUri: 'http://localhost:3000/callback',
+      redirectUri: 'https://discoverdoo.com/callback',
       responseType: 'token id_token',
       scope: 'openid profile'
     });

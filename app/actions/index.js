@@ -57,6 +57,7 @@ export const getCategories = () => {
 }
 
 export const getActivities = () => {
+  console.log(`${BASE_URL}/api/v1/activities`)
   return axios.get(`${BASE_URL}/api/v1/activities`).then(res => res.data)
 }
 

@@ -1,6 +1,9 @@
 import auth0 from 'auth0-js'
 import Cookies from 'js-cookie'
 
+const CLIENT_URL = process.env.CLIENT_URL;
+console
+
 class Auth0 {
 
   constructor() {
@@ -8,7 +11,8 @@ class Auth0 {
       domain: 'jakepeg.eu.auth0.com',
       clientID: '6w0luoKEKUH4QLOImluA81kNf3jLmWbr',
       // redirectUri: 'http://localhost:3000/callback',
-      redirectUri: 'https://discoverdoo.com/callback',
+      // redirectUri: 'https://discoverdoo.com/callback',
+      redirectUri: `${CLIENT_URL}/callback`,
       responseType: 'token id_token',
       scope: 'openid profile'
     });
@@ -52,18 +56,22 @@ class Auth0 {
     Cookies.remove('returnURL')
 
     this.auth0.logout({
-      returnTo: 'https://discoverdoo.com',
+      // returnTo: 'https://discoverdoo.com',
+      returnTo: CLIENT_URL,
       clientID: '6w0luoKEKUH4QLOImluA81kNf3jLmWbr'
     })
   }
 
   login() {
-    Cookies.set('returnURL', 'https://discoverdoo.com/')
+    // Cookies.set('returnURL', CLIENT_URL)
+    Cookies.set('returnURL', '/')
     this.auth0.authorize()
+    console.log(CLIENT_URL)
   }
 
   loginAddActivity() {
-    Cookies.set('returnURL', 'https://discoverdoo.com/create')
+    // Cookies.set('returnURL', `${CLIENT_URL}/create`)
+    Cookies.set('returnURL', '/create')
     this.auth0.authorize()
   }
 

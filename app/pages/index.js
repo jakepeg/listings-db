@@ -36,7 +36,7 @@ const Home = (props) => {
 
       </div>
 
-          <div className="rowz">
+          <div className="rowz grid">
             {/* <Card /> */}
 
             <ActivityList activities={filterActivities(props.activities) || []} />

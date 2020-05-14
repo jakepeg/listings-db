@@ -5,6 +5,7 @@ import Nav from '../components/nav'
 class ActivityApp extends App {
 
   static async getInitialProps(appContext) {
+    console.log(process.env.CLIENT_URL)
     const appProps = await App.getInitialProps(appContext)
     return { ...appProps }
   }
@@ -154,24 +155,16 @@ class ActivityApp extends App {
             color: rgb(0, 0, 0, 0.8);
           }
 
-          .contain {
-            width: 100%;
-            margin-right: auto;
-            margin-left: auto;
-          }
-
           .react-select-container {
             margin: 20px 0 20px 20px;
-            
           }
 
           .react-select-container:focus {
             outline: none;
-            
           }
 
           .react-select__control {
-            width: 455px;
+            width: 350px;
             border: 0 solid #fff!important;
             border-radius: 0!important;
             border-bottom: 2px solid #fff!important;
@@ -181,6 +174,17 @@ class ActivityApp extends App {
             font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif!important;
             font-weight: 400!important;
             cursor: pointer!important;
+          }
+
+          @media (max-width: 789px) {
+            .react-select__control {
+              width: 330px;
+              font-size: 1.8em!important;
+            }
+
+            .react-select-container {
+              margin: auto;
+            }
           }
 
           .react-select__control--is-focused {
@@ -384,55 +388,47 @@ class ActivityApp extends App {
           }
         }
 
+        .contain {
+          width: 100%;
+          max-width: 1140px;
+          margin-right: auto;
+          margin-left: auto;
+        }
 
+        .grid {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: left;
+        }
 
-          @media (min-width: 576px) {
-            .contain {
-                max-width: 540px;
-            }
+        .grid-item {
+          padding: 20px;
+        }
+
+        .rowz {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          margin-right: -15px;
+          margin-left: -15px;
+        }
+
+        @media (max-width: 1200px) {
+          .contain {
+            width: 100%;
+            max-width: 1140px;
+            padding-right: 20px;
+            padding-left: 20px;
           }
 
-          @media (min-width: 768px) {
-            .contain {
-                max-width: 720px;
-            }
-
-            .grid-item {
-              -ms-flex: 0 0 50%;
-              flex: 0 0 50%;
-              max-width: 50%;
-            }
+          .grid {
+            justify-content: center;
           }
+        }
 
-          @media (min-width: 992px) {
-            .contain {
-                max-width: 960px;
-            }
-
-            .grid-item {
-              -ms-flex: 0 0 33.333333%;
-              flex: 0 0 33.333333%;
-              max-width: 33.333333%;
-              padding: 20px;
-            }
-          }
-
-          @media (min-width: 1200px) {
-            .contain {
-                max-width: 1140px;
-            }
-          }
-
-          .rowz {
-              display: -ms-flexbox;
-              display: flex;
-              -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-              margin-right: -15px;
-              margin-left: -15px;
-          }
-
-          [hidden]{display:none!important}
+        [hidden]{display:none!important}
 
       `}</style>
       </div>

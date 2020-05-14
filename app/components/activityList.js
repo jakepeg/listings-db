@@ -80,29 +80,8 @@ const ActivityList = (props) => {
           color: FireBrick;
         }
 
-        @media (max-width: 1200px) {
-          .card {
-            width: 290px;
-            height: 340px;
-          }
 
-          .card-image {
-            width: 290px;
-            height: 200px;
-          }
-        }
 
-        @media (max-width: 991px) {
-          .card {
-            width: 350px;
-            height: 340px;
-          }
-
-          .card-image {
-            width: 350px;
-            height: 250px;
-          }
-        }
 
       `}</style>
     </>

@@ -56,7 +56,7 @@ const DetailPage = (props) => {
               </span>
             }
 
-            <p className="info">
+            {/* <p className="info">
             <img className="map-icon" src="/share.svg" alt="Share" />
             Share with friends
             </p>
@@ -64,7 +64,7 @@ const DetailPage = (props) => {
             <p className="info">
             <img className="map-icon" src="/favorite.svg" alt="Add to favorites" />
             Add to favorites
-            </p>
+            </p> */}
 
             {activity.website.length > 0 &&
               <span>

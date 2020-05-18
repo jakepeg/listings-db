@@ -377,6 +377,12 @@ const Edit = (props) => {
       display: flex;
     }
 
+    @media (max-width: 1100px) {
+      .add-activity-form {
+        flex-direction: column;
+      }
+    }
+
     .form-col {
       flex: 1;
     }

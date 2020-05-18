@@ -1,6 +1,7 @@
 import App from 'next/app'
 import Head from 'next/head'
 import Nav from '../components/nav'
+import Footer from '../components/footer'
 
 class ActivityApp extends App {
 
@@ -15,33 +16,54 @@ class ActivityApp extends App {
     return (
       <div>
         <Head>
-          <title>Home</title>
+          <title>DiscoverDoo fun finder</title>
+          <meta name="title" content="DiscoverDoo fun finder" />
+          <meta name="description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically. " />
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.discoverdoo.com/" />
+          <meta property="og:title" content="DiscoverDoo fun finder" />
+          <meta property="og:description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically. " />
+          <meta property="og:image" content="https://cl.ly/cad938ecc38d/poster.png" />
+          {/* Twitter */}
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://www.discoverdoo.com/" />
+          <meta property="twitter:title" content="DiscoverDoo fun finder" />
+          <meta property="twitter:description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically. " />
+          <meta property="twitter:image" content="https://cl.ly/cad938ecc38d/poster.png" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
           />
-
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
           />
-
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+          />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150534374-2"></script>
+          <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-150534374-2');
+              `,
+          }}
           />
         </Head>
         <Nav />
         <div className="base-page">
           <Component {...pageProps} />
-          <div id="modal" />
+          {/* <div id="modal" /> */}
+          <div className="push-footer"></div>
         </div>
-        <style jsx>{`
-          
-        `}</style>
+        <Footer />
 
         <style jsx global>{`
-
 
         html,
           body {
@@ -65,10 +87,31 @@ class ActivityApp extends App {
             margin: 0;
           }
 
-          footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+
+
+          .base-page {
+            min-height: 100%;
+            margin-bottom: -150px;
+          }
+
+          .footer,
+          .push-footer {
+            height: 150px;
+          }
+
+          .footer {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .footer-section {
+            background-color: white;
+            width: 25%;
+            margin: 20px;
+          }
+
+          .footer-header {
+            text-align: center;
           }
 
           button {
@@ -153,6 +196,16 @@ class ActivityApp extends App {
             line-height: 1;
             letter-spacing: 0em;
             color: rgb(0, 0, 0, 0.8);
+          }
+
+          h3 {
+            font-size: 2rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: 0em;
+            color: white;
+            margin-left: 20px;
           }
 
           .react-select-container {

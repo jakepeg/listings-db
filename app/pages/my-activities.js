@@ -19,10 +19,10 @@ const MyActivities = (props) => {
       { auth0.isAuthenticated() &&
 <>
         <div className="rowz">
-          <h2>My Activities</h2>
+          <h3>My activities</h3>
         </div>
 
-        <div className="rowz">
+        <div className="rowz grid">
           <ActivityList activities={filterActivities(props.activities) || []} />
         </div>
 </>
@@ -31,7 +31,7 @@ const MyActivities = (props) => {
       { auth0.isAuthenticated() === false &&
 
         <div className="rowz">
-          <h2>Login to see your activities</h2>
+          <h2>You need to sign in to see your activities</h2>
         </div>
 
       }

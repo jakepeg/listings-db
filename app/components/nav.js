@@ -11,7 +11,8 @@ const Login = () => {
 
 const LoginAddActivity = () => {
   return (
-    <button type="button" className="cta" onClick={auth0.loginAddActivity}>Add activity</button>
+    // <button type="button" className="cta" onClick={auth0.loginAddActivity}>Add activity</button>
+    <span className="nav-link" onClick={auth0.loginAddActivity}>ADD ACTIVITY</span>
   )
 }
 
@@ -58,8 +59,8 @@ const Nav = () => {
 
       { auth0.isAuthenticated() === false &&
       <>
-        <Login />
         <LoginAddActivity />
+        <Login />
     </>
       }
 

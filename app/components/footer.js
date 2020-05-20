@@ -1,22 +1,47 @@
 import Link from 'next/link'
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  EmailShareButton,
+  EmailIcon
+} from "react-share";
 
 const Footer = () => {
   return (
-    <footer className="contain">
-      <div className="footer-header">
-      <h3>Hey Doozers!</h3>
+    <footer>
 
-<p>Discover Doo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically.  If you know of other good resources then please share them - just click the Add Activity button!</p>
-      </div>
-      <div className="footer">
-      <div className="footer-section">
-      If you have any feedback or just want to say hi then email <a href="mailto:hello@discoverdoo.com">hello@discoverdoo.com</a>
-      </div>
-      <div className="footer-section">
-      If you like the site then please share with your network :
-      </div>
-      <div className="footer-section">Privacy</div>
-      </div>
+      <h3>Websites, Apps and Youtube Channels to keep kids active</h3>
+
+
+      <h4>Share DiscoverDoo</h4>
+
+
+      <FacebookShareButton
+              className="social-icons"
+              url="https://www.discoverdoo.com"
+              quote="Check out DiscoverDoo, a currated list of Websites, Apps and Youtube Channels to keep kids active"
+            >
+              <FacebookIcon size={48} round={true} />
+            </FacebookShareButton>
+            <TwitterShareButton
+              className="social-icons"
+              url="https://www.discoverdoo.com"
+            >
+              <TwitterIcon size={48} round={true} />
+            </TwitterShareButton>
+            <EmailShareButton
+              className="social-icons"
+              url="https://www.discoverdoo.com"
+              openWindow="true"
+              subject="DiscoverDoo"
+              body="Check out DiscoverDoo, a currated list of Websites, Apps and Youtube Channels to keep kids active"
+            >
+              <EmailIcon size={48} round={true} />
+            </EmailShareButton>
+
+            <p className="email-link"><a href="mailto:hello@discoverdoo.com">hello@discoverdoo.com</a></p>
   </footer>
   )
 }

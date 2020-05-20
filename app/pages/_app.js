@@ -1,5 +1,6 @@
 import App from 'next/app'
 import Head from 'next/head'
+import CookieConsent from "react-cookie-consent";
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 
@@ -59,10 +60,15 @@ class ActivityApp extends App {
         <div className="base-page">
           <Component {...pageProps} />
           {/* <div id="modal" /> */}
-          <div className="push-footer"></div>
+
         </div>
         <Footer />
-
+        <CookieConsent
+          style={{ background: "#000000" }}
+          buttonStyle={{ background: "#0097A7", color: "#000000", fontSize: "12px" }}
+        >
+              This website uses cookies to enhance the user experience.
+        </CookieConsent>
         <style jsx global>{`
 
         html,
@@ -77,41 +83,31 @@ class ActivityApp extends App {
           }
 
           body {
-
             font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
             font-size: 1rem;
-
             background-color: #00BCD4;
             min-height: 100vh;
             position: relative;
             margin: 0;
           }
 
-
-
           .base-page {
-            min-height: 100%;
-            margin-bottom: -150px;
+            background-color: #00BCD4;
+            min-height: 100vh;
+            
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0px;
           }
 
-          .footer,
-          .push-footer {
-            height: 150px;
-          }
-
-          .footer {
-            display: flex;
-            justify-content: space-between;
-          }
-
-          .footer-section {
-            background-color: white;
-            width: 25%;
-            margin: 20px;
-          }
-
-          .footer-header {
+          footer {
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #02111B;
             text-align: center;
+            padding: 30px;
           }
 
           button {
@@ -207,6 +203,25 @@ class ActivityApp extends App {
             color: white;
             margin-left: 20px;
           }
+
+          h4 {
+            font-size: 1.2rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: 0em;
+            color: white;
+          }
+
+          .social-icons {
+            margin: 0 10px;
+          }
+
+          .email-link {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+          }
+
 
           .react-select-container {
             margin: 20px 0 20px 20px;
@@ -310,6 +325,7 @@ class ActivityApp extends App {
         .details-card {
           background: #fff;
           box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+          margin-bottom: 60px;
         }
 
         .card-header {

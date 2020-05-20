@@ -10,10 +10,10 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Arts and crafts",
     "medium": "App",
-    "id": "bz4mpal"
+    "id": "Antiglum"
   },
   {
-    "id": "1",
+    "id": "PE-with-Joe",
     "name": "P.E. with Joe",
     "description": "Joe Wicks Youtube channel provides live week day 30 minute fitness sessions, suitable for kids of all ages, and parents too! If you want to join in, live broadcasts are at 9am GMT Monday to Friday",
     "category": "Sport and fitness",
@@ -27,7 +27,7 @@
     "userEmail": "jakepeg@gmail.com"
   },
   {
-    "id": "2",
+    "id": "Teach-your-monster-to-read",
     "name": "Teach your monster to read",
     "description": "Teach Your Monster to Read is an award-winning series of games that’s helped millions of children learn to read. Play for free on the website or download the app. Create a monster and take it on an adventure through a magical world. Travel to exciting places, meet fun characters, play games and win prizes as your monster learns the first steps of reading.",
     "category": "Academic, Games",
@@ -41,7 +41,7 @@
     "userEmail": "jakepeg@gmail.com"
   },
   {
-    "id": "3",
+    "id": "Little-Fooby",
     "name": "Little Fooby",
     "description": "little FOOBY is all about cooking with little ones. As well as recipes and inspiration, little FOOBY is packed with important and interesting information about cooking with children.",
     "category": "Cooking",
@@ -65,7 +65,7 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Arts and crafts",
     "medium": "Youtube",
-    "id": "ry4hexh"
+    "id": "Easy-Peasy-Fun"
   },
   {
     "name": "Cosmic Kids Yoga",
@@ -78,10 +78,10 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Sport and fitness",
     "medium": "Youtube",
-    "id": "eu1nh9v"
+    "id": "Cosmic-Kids-Yoga"
   },
   {
-    "id": "4",
+    "id": "Twinkl",
     "name": "Twinkl",
     "description": "Twinkl Educational Publishing is an online educational publishing house, producing teaching and educational materials.",
     "category": "Academic",
@@ -95,8 +95,8 @@
     "userEmail": "jakepeg@gmail.com"
   },
   {
-    "id": "5",
-    "name": "DoodleMaths",
+    "id": "Doodle-Maths",
+    "name": "Doodle Maths",
     "description": "DoodleMaths builds the maths confidence of your 4-14 year old with a work programme tailored to their strengths and weaknesses. Using Proxima™, our award-winning technology, DoodleMaths analyses and intelligently designs a unique learning programme for each learner.",
     "category": "Academic",
     "medium": "App",
@@ -109,7 +109,7 @@
     "userEmail": "jakepeg@gmail.com"
   },
   {
-    "id": "6",
+    "id": "Learn-to-Juggle",
     "name": "Learn to Juggle",
     "description": "Learn to juggle with Josh Horton, World Champion Juggler. 19-Time Guinness World Record Holder. If you don't have juggling balls you can use rolled up socks!",
     "category": "Sport and fitness",
@@ -133,7 +133,7 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "userEmail": "jakepeg@gmail.com",
     "category": "Academic",
-    "id": "50ze3ii",
+    "id": "The-Dad-Lab",
     "medium": "Website"
   },
   {
@@ -147,7 +147,7 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Academic",
     "medium": "Website",
-    "id": "g1ft6zr"
+    "id": "BBC-Bitesize"
   },
   {
     "name": "Code Kingdoms",
@@ -160,7 +160,7 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Academic,Games",
     "medium": "App",
-    "id": "567nx7r"
+    "id": "Code-Kingdoms"
   },
   {
     "name": "Fitness Blender",
@@ -173,7 +173,7 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "medium": "Website",
     "category": "Sport and fitness",
-    "id": "uxrv1ol"
+    "id": "Fitness-Blender"
   },
   {
     "name": "Cook With Amber",
@@ -186,7 +186,7 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Cooking",
     "medium": "Youtube",
-    "id": "fcy0cua"
+    "id": "Cook-With-Amber"
   },
   {
     "name": "London Art College",
@@ -199,6 +199,6 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Arts and crafts",
     "medium": "Website",
-    "id": "57z5oko"
+    "id": "London-Art-College"
   }
 ]

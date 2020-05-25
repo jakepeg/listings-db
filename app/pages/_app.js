@@ -107,6 +107,9 @@ class ActivityApp extends App {
             width: 100%;
             background-color: #02111B;
             text-align: center;
+          }
+
+          .footer-content {
             padding: 30px;
           }
 
@@ -449,6 +452,11 @@ class ActivityApp extends App {
           .image-section {
               width: 300px;
           }
+
+          .footer-content {
+            padding: 0;
+          }
+
         }
 
         @media (max-width: 768px) {
@@ -466,6 +474,10 @@ class ActivityApp extends App {
 
           .loggedin {
             display: none;
+          }
+
+          .footer-content {
+            padding: 0;
           }
         }
 

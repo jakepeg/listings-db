@@ -12,6 +12,8 @@ const Footer = () => {
   return (
     <footer>
 
+    <div className="footer-content">
+
       <h3>Websites, Apps and Youtube Channels to keep kids active</h3>
 
 
@@ -42,6 +44,7 @@ const Footer = () => {
             </EmailShareButton>
 
             <p className="email-link"><a href="mailto:hello@discoverdoo.com">hello@discoverdoo.com</a></p>
+    </div>
   </footer>
   )
 }

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import auth0 from '../services/auth0'
-// import SideMenu from './sideMenu'
+import SideMenu from './sideMenu'
 
 const Login = () => {
   return (
@@ -19,7 +19,7 @@ const LoginAddActivity = () => {
 const Logout = () => {
   return (
     // <button type="button" onClick={auth0.logout}>Logout</button>
-    <span className="nav-link" onClick={auth0.logout}>LOGOUT</span>
+    <span className="nav-link loggedin" onClick={auth0.logout}>LOGOUT</span>
   )
 }
 
@@ -43,17 +43,17 @@ const Nav = () => {
 <>
       <Link href="/create">
         {/* <button type="button" className="cta">Add activity</button> */}
-        <span className="nav-link">ADD ACTIVITY</span>
+        <span className="nav-link loggedin">ADD ACTIVITY</span>
       </Link>
 
       <Link href="/my-activities">
         {/* <button type="button">My activities</button> */}
-        <span className="nav-link">MY ACTIVITIES</span>
+        <span className="nav-link loggedin">MY ACTIVITIES</span>
       </Link>
 
       <Logout />
 
-      {/* <SideMenu /> */}
+      <SideMenu />
 </>
       }
 

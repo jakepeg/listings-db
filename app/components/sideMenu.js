@@ -1,5 +1,5 @@
 import React from "react";
-import Link from 'next/link'
+import auth0 from '../services/auth0'
 import { stack as Menu } from "react-burger-menu";
 
 var styles = {
@@ -8,10 +8,10 @@ var styles = {
     width: '32px',
     height: '26px',
     right: '26px',
-    top: '25px'
+    top: '20px'
   },
   bmBurgerBars: {
-    background: '#e50273'
+    background: '#ffffff'
   },
   bmBurgerBarsHover: {
     background: '#a90000'
@@ -50,16 +50,11 @@ var styles = {
 
 const SideMenu = () => (
 
-  <Menu right styles={ styles }>
-        <a id="home" className="menu-item" href="/">Home</a>
-        <a id="create" className="menu-item" href="/create">Add activity</a>
-        <a id="contact" className="menu-item" href="/contact">My activities</a>
-        <a id="contact" className="menu-item" href="/contact">Logout</a>
-
-        <Link href="/create">
-          <button type="button" className="cta">Add activity</button>
-        </Link>
-
+  <Menu className="burger" right styles={ styles }>
+        <a className="menu-item" href="/">Home</a>
+        <a className="menu-item" href="/create">Add activity</a>
+        <a className="menu-item" href="/my-activities">My activities</a>
+        <a className="menu-item" onClick={auth0.logout}>Logout</a>
   </Menu>
 );
 

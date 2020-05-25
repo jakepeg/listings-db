@@ -377,6 +377,7 @@ const Create = (props) => {
     @media (max-width: 1100px) {
       .add-activity-form {
         flex-direction: column;
+        margin: 0;
       }
     }
 

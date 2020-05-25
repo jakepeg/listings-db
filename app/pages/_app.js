@@ -435,6 +435,10 @@ class ActivityApp extends App {
           margin-bottom: 20px;
         }
 
+        .bm-burger-button {
+          display: none;
+        }
+
         @media (max-width: 1200px) {
           .image-section {
               width: 500px;
@@ -455,6 +459,15 @@ class ActivityApp extends App {
           .info-section {
             width: 100%;
           }
+
+          .bm-burger-button {
+            display: block;
+          }
+
+          .loggedin {
+            display: none;
+          }
+
         }
 
         .contain {

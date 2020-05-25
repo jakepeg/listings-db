@@ -7,8 +7,6 @@ const MyActivities = (props) => {
 
   const filterActivities = activities => {
     return activities.filter((a) => {
-      // return a.userId && a.userId.includes('google-oauth2|101810273024241340954')
-      // console.log(Cookies.get('sub'))
       return a.userId && a.userId.includes(Cookies.get('sub'))
     })
   }

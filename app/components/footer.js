@@ -34,7 +34,7 @@ const Footer = () => {
             <EmailShareButton
               className="social-icons"
               url="https://www.discoverdoo.com"
-              openWindow="true"
+              openwindow="true"
               subject="DiscoverDoo"
               body="Check out DiscoverDoo, a currated list of Websites, Apps and Youtube Channels to keep kids active"
             >

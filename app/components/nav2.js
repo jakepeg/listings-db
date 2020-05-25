@@ -4,22 +4,35 @@ import SideMenu from './sideMenu'
 
 const Login = () => {
   return (
-    // <button type="button" onClick={auth0.login}>Login</button>
     <span className="nav-link" onClick={auth0.login}>SIGN IN</span>
   )
 }
 
 const LoginAddActivity = () => {
   return (
-    // <button type="button" className="cta" onClick={auth0.loginAddActivity}>Add activity</button>
     <span className="nav-link" onClick={auth0.loginAddActivity}>ADD ACTIVITY</span>
   )
 }
 
 const Logout = () => {
   return (
-    // <button type="button" onClick={auth0.logout}>Logout</button>
-    <span className="nav-link loggedin" onClick={auth0.logout}>LOGOUT</span>
+    <span className="nav-link" onClick={auth0.logout}>LOGOUT</span>
+  )
+}
+
+const AddActivity = () => {
+  return (
+    <Link href="/create">
+      <span className="nav-link">ADD ACTIVITY</span>
+    </Link>
+  )
+}
+
+const MyActivities = () => {
+  return (
+    <Link href="/my-activities">
+      <span className="nav-link">MY ACTIVITIES</span>
+    </Link>
   )
 }
 
@@ -34,17 +47,14 @@ const Nav = () => {
         <div id="menu">
           { auth0.isAuthenticated() &&
           <>
-            <Link href="/create">
-              <span className="nav-link loggedin">ADD ACTIVITY</span>
-            </Link>
-            <Link href="/my-activities">
-              <span className="nav-link loggedin">MY ACTIVITIES</span>
-            </Link>
+          <div className="loggedin">
+            <AddActivity />
+            <MyActivities />
             <Logout />
-            <SideMenu />
+          </div>
+          <SideMenu />
           </>
           }
-
           { auth0.isAuthenticated() === false &&
           <>
             <LoginAddActivity />

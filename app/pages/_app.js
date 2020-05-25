@@ -1,7 +1,7 @@
 import App from 'next/app'
 import Head from 'next/head'
 import CookieConsent from "react-cookie-consent";
-import Nav from '../components/nav'
+import Nav from '../components/nav2'
 import Footer from '../components/footer'
 
 class ActivityApp extends App {
@@ -467,7 +467,6 @@ class ActivityApp extends App {
           .loggedin {
             display: none;
           }
-
         }
 
         .contain {

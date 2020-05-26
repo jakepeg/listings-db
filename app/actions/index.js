@@ -77,5 +77,6 @@ export const updateActivity = (activity) => {
 }
 
 export const deleteActivity = (id) => {
-  return axios.delete(`${BASE_URL}/api/v1/activities/${id}`).then(res => res.data)
+  return axios.delete(`${BASE_URL}/api/v1/activities/${id}`)
+  // return axios.delete(`${BASE_URL}/api/v1/activities/${id}`).then(res => res.data)
 }

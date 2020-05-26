@@ -200,5 +200,18 @@
     "category": "Arts and crafts",
     "medium": "Website",
     "id": "London-Art-College"
+  },
+  {
+    "name": "Khan Academy Kids",
+    "description": "Khan Academy Kids is a free, fun, educational program designed to inspire young children to become learners for life. The robust Khan Academy Kids curriculum and original content make learning engaging and fun for children ages two to seven.",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1590479343/doozone/bemheruhrgkdr54ict1d.jpg",
+    "ageFrom": "2",
+    "ageTo": "7",
+    "price": "Free",
+    "website": "learn.khanacademy.org/khan-academy-kids/",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
+    "category": "Academic",
+    "medium": "Website",
+    "id": "9nstw63"
   }
 ]

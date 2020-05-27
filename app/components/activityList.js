@@ -8,7 +8,7 @@ const ActivityList = (props) => {
       { activities.map(activity => (
             <div key={activity.id}>
               <div className="grid-item">
-              <Link href={`/activities/${activity.id}`}>
+              <Link href={`/activities/${activity.id}`} as={`/activities/${activity.id}`} prefetch>
                 <div className="card">
                 <div className="card-image" style={{background: 'url(' + activity.image + ')'}}></div>
                 <div className="card-content">
@@ -37,7 +37,9 @@ const ActivityList = (props) => {
           cursor: pointer;
         }
 
-
+        .card :hover {
+          box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2), 0px 10px 14px 1px rgba(0,0,0,0.14), 0px 4px 18px 3px rgba(0,0,0,0.12);
+        }
 
         .card-image {
           width: 350px;

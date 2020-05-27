@@ -36,7 +36,8 @@ server.post("/api/v1/activities", (req, res) => {
 
   fs.writeFile(pathToFile, stringifiedData, err => {
     if (err) {
-      return res.status(422).send(err);
+      // return res.status(422).send(err);
+      console.log(err);
     }
 
     return res.json("Activity has been succesfuly added!");
@@ -76,7 +77,8 @@ server.patch("/api/v1/activities/:id", (req, res) => {
   const stringifiedData = JSON.stringify(activitiesData, null, 2);
   fs.writeFile(pathToFile, stringifiedData, err => {
     if (err) {
-      return res.status(422).send(err);
+      // return res.status(422).send(err);
+      console.log(err);
     }
     return res.json("Activity has been succesfuly updated!");
   });

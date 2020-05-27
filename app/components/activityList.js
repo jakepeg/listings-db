@@ -8,7 +8,8 @@ const ActivityList = (props) => {
       { activities.map(activity => (
             <div key={activity.id}>
               <div className="grid-item">
-
+              <Link href={`/activities/${activity.id}`} as={`/activities/${activity.id}`}>
+              <a className="nounderline">
                 <div className="card">
                 <div className="card-image" style={{background: 'url(' + activity.image + ')'}}></div>
                 <div className="card-content">
@@ -19,7 +20,8 @@ const ActivityList = (props) => {
                   </div>
                 </div>
                 </div>
-
+                </a>
+              </Link>
               </div>
             </div>
           )
@@ -27,6 +29,10 @@ const ActivityList = (props) => {
       }
 
       <style jsx>{`
+
+        .nounderline {
+          text-decoration: none;
+        }
 
         .card {
           width: 350px;

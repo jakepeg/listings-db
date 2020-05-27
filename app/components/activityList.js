@@ -8,7 +8,8 @@ const ActivityList = (props) => {
       { activities.map(activity => (
             <div key={activity.id}>
               <div className="grid-item">
-              <Link href={`/activities/${activity.id}`} as={`/activities/${activity.id}`}>
+              {/* <Link href={`/activities/${activity.id}`}> */}
+              <Link href="/activities/[id]" as={`/activities/${activity.id}`}>
               <a className="nounderline">
                 <div className="card">
                 <div className="card-image" style={{background: 'url(' + activity.image + ')'}}></div>

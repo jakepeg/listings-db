@@ -1,4 +1,3 @@
-
 import { useRouter } from 'next/router'
 import { getActivityById, deleteActivity } from '../../../actions'
 import Link from 'next/link'

@@ -49,9 +49,7 @@ server.post("/api/v1/activities", (req, res) => {
 // })
 
 server.delete("/api/v1/activities/:id", (req, res) => {
-  const {
-    id
-  } = req.params;
+  const { id } = req.params;
   const activityIndex = activitiesData.findIndex(c => c.id === id);
   activitiesData.splice(activityIndex, 1);
   const pathToFile = path.join(__dirname, filePath);
@@ -60,6 +58,8 @@ server.delete("/api/v1/activities/:id", (req, res) => {
     if (err) {
       return res.status(422).send(err);
     }
+    console.log(pathToFile);
+    console.log(stringifiedData);
     return res.json("Activity has been succesfuly added!");
   });
 });

@@ -1,18 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
-import LazyLoad from 'react-lazyload'
 
 const ActivityList = (props) => {
   const { activities } = props
-
   return (
     <>
-
-
-
-
       { activities.map(activity => (
-        <LazyLoad throttle={200} height={300} key={activity.id}>
+            <div key={activity.id}>
               <div className="grid-item">
               <Link href="/activities/[id]" as={`/activities/${activity.id}`}>
               <a className="nounderline">
@@ -29,11 +23,10 @@ const ActivityList = (props) => {
                 </a>
               </Link>
               </div>
-            </LazyLoad>
+            </div>
           )
         )
       }
-
 
       <style jsx>{`
 

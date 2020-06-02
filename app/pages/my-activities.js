@@ -20,9 +20,9 @@ const MyActivities = (props) => {
           <h3>My activities</h3>
         </div>
 
-        <div className="rowz grid">
+        {/* <div className="rowz grid"> */}
           <ActivityList activities={filterActivities(props.activities) || []} />
-        </div>
+        {/* </div> */}
 </>
       }
 

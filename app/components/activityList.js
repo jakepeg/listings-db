@@ -7,17 +7,16 @@ const ActivityList = (props) => {
 
   return (
     <>
-
-
-
-
+      <div className="card-grid" id="grid">
       { activities.map(activity => (
-        <LazyLoad throttle={200} height={300} key={activity.id}>
-              <div className="grid-item">
+        <div key={activity.id}>
+        <LazyLoad height={400} throttle={500}>
+
               <Link href="/activities/[id]" as={`/activities/${activity.id}`}>
               <a className="nounderline">
                 <div className="card">
-                <div className="card-image" style={{background: 'url(' + activity.image + ')'}}></div>
+                {/* <div className="card-image" style={{background: 'url(' + activity.image + ')'}}></div> */}
+                <img className="card-image" src={activity.image} loading="lazy" />
                 <div className="card-content">
                   <h2>{activity.name}</h2>
                   <div className="card-footer">
@@ -28,17 +27,26 @@ const ActivityList = (props) => {
                 </div>
                 </a>
               </Link>
-              </div>
+
             </LazyLoad>
+            </div>
           )
         )
       }
-
-
+      </div>
       <style jsx>{`
 
         .nounderline {
           text-decoration: none;
+        }
+
+        .card-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 350px);
+          justify-content: space-between;
+          grid-row-gap: 40px;
+          margin-top: 30px;
+          margin-bottom: 30px;
         }
 
         .card {
@@ -57,9 +65,6 @@ const ActivityList = (props) => {
         .card-image {
           width: 350px;
           height: 250px;
-          display: block!important;
-          background-size: cover!important;
-          background-repeat: no-repeat!important;
         }
 
         .card-content {
@@ -92,6 +97,26 @@ const ActivityList = (props) => {
         .Youtube {
           color: FireBrick;
         }
+
+        @media (max-width: 1130px) {
+          .card-grid {
+            grid-template-columns: repeat(2, 350px);
+            justify-content: space-around;
+          }
+        }
+
+        @media (max-width: 992px) {
+
+        }
+
+        @media (max-width: 768px) {
+          .card-grid {
+            grid-template-columns: repeat(1, 350px);
+            justify-content: space-around;
+          }
+        }
+
+
 
       `}</style>
     </>

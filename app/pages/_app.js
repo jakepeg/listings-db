@@ -94,7 +94,6 @@ class ActivityApp extends App {
           .base-page {
             background-color: #00BCD4;
             min-height: 100vh;
-            
             position: relative;
             z-index: 1;
             margin-bottom: 0px;
@@ -136,7 +135,6 @@ class ActivityApp extends App {
             background-color: #e50273;
             border: 1px solid white;
             color: white;
-            
             letter-spacing: 2px;
             font-weight: 400;
             font-size: .9rem;
@@ -225,7 +223,6 @@ class ActivityApp extends App {
             margin-bottom: 40px;
           }
 
-
           .react-select-container {
             margin: 20px 0 20px 20px;
           }
@@ -307,9 +304,7 @@ class ActivityApp extends App {
             padding: 6px 0 !important;
           }
 
-
-
-          #back-btn {
+        #back-btn {
           margin-left: auto;
           margin-top: 15px;
           cursor: pointer;
@@ -442,9 +437,33 @@ class ActivityApp extends App {
           display: none;
         }
 
+        .contain {
+          width: 100%;
+          max-width: 1140px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+        .rowz {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          margin-right: -15px;
+          margin-left: -15px;
+        }
+
+
         @media (max-width: 1200px) {
           .image-section {
               width: 500px;
+          }
+
+          .contain {
+            width: 100%;
+            max-width: 1140px;
+            padding-right: 20px;
+            padding-left: 20px;
           }
         }
 
@@ -478,46 +497,6 @@ class ActivityApp extends App {
 
           .footer-content {
             padding: 0;
-          }
-        }
-
-        .contain {
-          width: 100%;
-          max-width: 1140px;
-          margin-right: auto;
-          margin-left: auto;
-        }
-
-        .grid {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: left;
-        }
-
-        .grid-item {
-          padding: 20px;
-        }
-
-        .rowz {
-          display: -ms-flexbox;
-          display: flex;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-          margin-right: -15px;
-          margin-left: -15px;
-        }
-
-        @media (max-width: 1200px) {
-          .contain {
-            width: 100%;
-            max-width: 1140px;
-            padding-right: 20px;
-            padding-left: 20px;
-          }
-
-          .grid {
-            justify-content: center;
           }
         }
 

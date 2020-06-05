@@ -200,5 +200,44 @@
     "category": "Arts and crafts",
     "medium": "Website",
     "id": "London-Art-College"
+  },
+  {
+    "name": "National Geographic Kids",
+    "description": "Nat Geo Kids makes it fun to explore your world with weird, wild, and wacky videos and games, featuring awesome animals, cool science, funny pets, and more! ",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1591255895/doozone/tr0uskblvvuelsrfwq2a.jpg",
+    "ageFrom": "5",
+    "ageTo": "16",
+    "price": "Free",
+    "website": "kids.nationalgeographic.com",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
+    "category": "Academic,Games",
+    "medium": "Website",
+    "id": "ljiw21t"
+  },
+  {
+    "name": "Beatbox Adventures",
+    "description": "Record-breaking beatboxer SK Shlomo is hosting weekly mass beatbox lessons to help kids and raise money for NHS Charities Together. Tune in every Thursday 2pm BST ",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1591257206/doozone/zfe32yrara6shq2axiuz.jpg",
+    "ageFrom": "3",
+    "ageTo": "99",
+    "price": "Free",
+    "website": "beatboxadventures.com",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
+    "category": "Music and dance",
+    "medium": "Website",
+    "id": "ptxac5x"
+  },
+  {
+    "name": "Time for kids",
+    "description": "Time for Kids brings age-appropriate news to young people, and provides teaching materials. Check out the FREE digital library!",
+    "image": "https://res.cloudinary.com/jakepeg/image/upload/v1591259117/doozone/mx0cza9f9sy85yqhgvu5.jpg",
+    "ageFrom": "5",
+    "ageTo": "16",
+    "price": "Free",
+    "website": "www.timeforkids.com",
+    "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
+    "category": "Academic",
+    "medium": "Website",
+    "id": "vakahxl"
   }
 ]

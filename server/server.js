@@ -1,25 +1,15 @@
 const express = require("express");
 const cors = require("cors");
-const config = require('./db_config');
-
-const mongoose = require('mongoose');
-mongoose.connect(config.DB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true
-}, (err) => {
-  if (err) { console.error(err); }
-  else {
-    console.log('Connected to DB!');
-  }
-})
-
+const { connect } = require('./db');
+const api = require("./api");
 const server = express();
 const port = 3001;
 
-const api = require("./api");
+async function runServer() {
+  await connect();
+  server.use(cors());
+  server.use(api);
+  server.listen(port, () => console.log(`API on port ${port}`));
+}
 
-server.use(cors());
-server.use(api);
-
-server.listen(port, () => console.log(`API on port ${port}`));
+runServer();

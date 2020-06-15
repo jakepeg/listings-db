@@ -1,4 +1,5 @@
 import axios from 'axios'
+import slugify from 'react-slugify';
 
 const BASE_URL = process.env.BASE_URL;
 // const BASE_URL = 'http://localhost:3000'
@@ -62,7 +63,8 @@ export const getActivities = () => {
 }
 
 export const createActivity = (activity) => {
-  activity.id = Math.random().toString(36).substr(2, 7)
+  // activity.id = Math.random().toString(36).substr(2, 7)
+  activity.id = slugify(activity.name)
   return axios.post(`${BASE_URL}/api/v1/activities`, activity).then(res => res.data)
 }
 
@@ -72,7 +74,9 @@ export const getActivityById = (id) => {
 }
 
 export const updateActivity = (activity) => {
-  return axios.patch(`${BASE_URL}/api/v1/activities/${activity.id}`, activity)
+  //console.log(activity._id)
+  activity.id = slugify(activity.name)
+  return axios.patch(`${BASE_URL}/api/v1/activities/${activity._id}`, activity)
   .then(res => res.data)
 }
 

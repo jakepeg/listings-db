@@ -1,3 +1,4 @@
 .now
+/node_modules
 /api/activities.json
-db_config.js
+/db/db_config.js

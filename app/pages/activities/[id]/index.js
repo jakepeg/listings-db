@@ -81,7 +81,7 @@ const DetailPage = (props) => {
         </div>
         {activity.userId === Cookies.get('sub') &&
             <>
-              <button className="delete-button" onClick={() => handleDelete(id)} href="#" role="button">Delete</button>
+              <button className="delete-button" onClick={() => handleDelete(activity._id)} href="#" role="button">Delete</button>
               <Link href="/activities/[id]/edit" as={`/activities/${id}/edit`}>
                 <button className="edit-button" role="button">Edit</button>
               </Link>

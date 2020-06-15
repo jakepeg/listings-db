@@ -13,46 +13,43 @@
     "id": "Antiglum"
   },
   {
-    "id": "PE-with-Joe",
     "name": "P.E. with Joe",
     "description": "Joe Wicks Youtube channel provides live week day 30 minute fitness sessions, suitable for kids of all ages, and parents too! If you want to join in, live broadcasts are at 9am GMT Monday to Friday",
-    "category": "Sport and fitness",
-    "medium": "Youtube",
     "image": "https://cl.ly/aac07d701948/26172278-8131471-image-a-48_1584635592839.jpg",
     "ageFrom": "2",
     "ageTo": "99",
     "price": "Free",
     "website": "www.youtube.com/playlist?list=PLyCLoPd4VxBvQafyve889qVcPxYEjdSTl",
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
-    "userEmail": "jakepeg@gmail.com"
+    "category": "Sport and fitness",
+    "medium": "Youtube",
+    "id": "PE-with-Joe"
   },
   {
-    "id": "Teach-your-monster-to-read",
     "name": "Teach your monster to read",
     "description": "Teach Your Monster to Read is an award-winning series of games that’s helped millions of children learn to read. Play for free on the website or download the app. Create a monster and take it on an adventure through a magical world. Travel to exciting places, meet fun characters, play games and win prizes as your monster learns the first steps of reading.",
-    "category": "Academic, Games",
-    "medium": "App",
     "image": "https://cl.ly/9d9e582e6df0/promo_06.png._CB447154789_.png",
     "ageFrom": "4",
     "ageTo": "7",
     "price": "$1",
     "website": "www.teachyourmonstertoread.com/",
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
-    "userEmail": "jakepeg@gmail.com"
+    "category": "Academic, Games",
+    "medium": "App",
+    "id": "Teach-your-monster-to-read"
   },
   {
-    "id": "Little-Fooby",
     "name": "Little Fooby",
     "description": "little FOOBY is all about cooking with little ones. As well as recipes and inspiration, little FOOBY is packed with important and interesting information about cooking with children.",
-    "category": "Cooking",
-    "medium": "Website",
     "image": "https://cl.ly/e6fce837c80a/slider_1_little_fooby.jpg",
     "ageFrom": "4",
     "ageTo": "14",
     "price": "Free",
     "website": "little.fooby.ch/en.html",
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
-    "userEmail": "jakepeg@gmail.com"
+    "category": "Cooking",
+    "medium": "Website",
+    "id": "Little-Fooby"
   },
   {
     "name": "Easy Peasy Fun",
@@ -81,46 +78,43 @@
     "id": "Cosmic-Kids-Yoga"
   },
   {
-    "id": "Twinkl",
     "name": "Twinkl",
     "description": "Twinkl Educational Publishing is an online educational publishing house, producing teaching and educational materials.",
-    "category": "Academic",
-    "medium": "Website",
     "image": "https://cl.ly/c65d21f86382/76693311_10156871594950028_219155228878962688_o.jpg",
     "ageFrom": "0",
     "ageTo": "18",
     "price": "Free",
     "website": "www.twinkl.ch",
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
-    "userEmail": "jakepeg@gmail.com"
+    "category": "Academic",
+    "medium": "Website",
+    "id": "Twinkl"
   },
   {
-    "id": "Doodle-Maths",
     "name": "Doodle Maths",
     "description": "DoodleMaths builds the maths confidence of your 4-14 year old with a work programme tailored to their strengths and weaknesses. Using Proxima™, our award-winning technology, DoodleMaths analyses and intelligently designs a unique learning programme for each learner.",
-    "category": "Academic",
-    "medium": "App",
     "image": "https://cl.ly/e778cceabf5f/how_doodlemaths_helped.jpg",
     "ageFrom": "4",
     "ageTo": "14",
     "price": "£5.99 month",
     "website": "www.doodlemaths.com",
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
-    "userEmail": "jakepeg@gmail.com"
+    "category": "Academic",
+    "medium": "App",
+    "id": "Doodle-Maths"
   },
   {
-    "id": "Learn-to-Juggle",
     "name": "Learn to Juggle",
     "description": "Learn to juggle with Josh Horton, World Champion Juggler. 19-Time Guinness World Record Holder. If you don't have juggling balls you can use rolled up socks!",
-    "category": "Sport and fitness",
-    "medium": "Youtube",
     "image": "https://cl.ly/f82a03ede956/maxresdefault.jpg",
     "ageFrom": "4",
     "ageTo": "99",
     "price": "Free",
     "website": "www.youtube.com/watch?v=JZmmOdnljG4",
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
-    "userEmail": "jakepeg@gmail.com"
+    "category": "Sport and fitness",
+    "medium": "Youtube",
+    "id": "Learn-to-Juggle"
   },
   {
     "name": "The Dad Lab",
@@ -131,10 +125,9 @@
     "price": "Free",
     "website": "www.thedadlab.com",
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
-    "userEmail": "jakepeg@gmail.com",
     "category": "Academic",
-    "id": "The-Dad-Lab",
-    "medium": "Website"
+    "medium": "Website",
+    "id": "The-Dad-Lab"
   },
   {
     "name": "BBC Bitesize",
@@ -212,7 +205,7 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Academic,Games",
     "medium": "Website",
-    "id": "ljiw21t"
+    "id": "National-Geographic-Kids"
   },
   {
     "name": "Beatbox Adventures",
@@ -225,7 +218,7 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Music and dance",
     "medium": "Website",
-    "id": "ptxac5x"
+    "id": "Beatbox-Adventures"
   },
   {
     "name": "Time for kids",
@@ -238,6 +231,6 @@
     "userId": "auth0|5e9604be9cdd9d0c0f9009e7",
     "category": "Academic",
     "medium": "Website",
-    "id": "vakahxl"
+    "id": "Time-Kids"
   }
 ]

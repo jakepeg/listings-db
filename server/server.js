@@ -3,7 +3,7 @@ const cors = require("cors");
 const { connect } = require('./db');
 const api = require("./api");
 const server = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 async function runServer() {
   await connect();

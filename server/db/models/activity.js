@@ -15,4 +15,7 @@ const activitySchema = new Schema({
   id: { type: String, required: true, maxlength: 128 }
 })
 
-module.exports = mongoose.model('Activity', activitySchema);
+// module.exports = mongoose.model('Activity', activitySchema);
+
+const Activity = mongoose.model('Activity',activitySchema);
+exports.Activity = Activity;

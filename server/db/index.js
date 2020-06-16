@@ -1,6 +1,7 @@
 const config = require('./db_config');
 const mongoose = require('mongoose');
-require('./models/activity');
+// require('./models/activity');
+const {Activity} = require('./models/activity');
 
 exports.connect = () => {
   return mongoose.connect(config.DB_URI, {

@@ -39,3 +39,5 @@ npm run dev
 # From root folder where you have now.json
 now
 ```
+
+now --prod

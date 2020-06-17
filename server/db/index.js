@@ -1,4 +1,4 @@
-const config = require('./config');
+const config = require('./db_config');
 const mongoose = require('mongoose');
 // require('./models/activity');
 const {Activity} = require('./models/activity');

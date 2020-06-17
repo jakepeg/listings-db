@@ -224,7 +224,7 @@ class ActivityApp extends App {
           }
 
           .react-select-container {
-            margin: 20px 0 20px 20px;
+            margin: 20px 0 20px 15px;
           }
 
           .react-select-container:focus {
@@ -271,8 +271,9 @@ class ActivityApp extends App {
           }
 
           .react-select__menu {
-            margin-top: 0!important;
+            margin-top: -3px!important;
             border-radius: 0!important;
+            border: 1px solid #0097A7;
             box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2), 0px 10px 14px 1px rgba(0,0,0,0.14), 0px 4px 18px 3px rgba(0,0,0,0.12);
           }
 
@@ -296,8 +297,8 @@ class ActivityApp extends App {
           }
 
           .react-select__option--is-selected {
-            background-color: #F8F8F8!important;
-            color: rgb(0,0,0,0.8)!important;
+            background-color: #ffffff;
+            color: #0097A7;
           }
 
           .react-select__value-container {

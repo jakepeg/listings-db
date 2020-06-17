@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { getActivityById, deleteActivity } from '../../../actions'
 import Link from 'next/link'
-import Cookies from 'js-cookie'
+import auth0 from '../../../services/auth0'
 
 const DetailPage = (props) => {
   const router = useRouter()
@@ -79,7 +79,8 @@ const DetailPage = (props) => {
           <img className="image-section" src={activity.image} alt={activity.name} />
         
         </div>
-        {activity.userId === Cookies.get('sub') &&
+        {/* {activity.userId === Cookies.get('sub') && */}
+        { auth0.isAuthenticated() &&
             <>
               <button className="delete-button" onClick={() => handleDelete(activity._id)} href="#" role="button">Delete</button>
               <Link href="/activities/[id]/edit" as={`/activities/${id}/edit`}>

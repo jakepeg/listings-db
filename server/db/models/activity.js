@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const activitySchema = new Schema({
+const activitySchema = new mongoose.Schema({
   name: { type: String, required: true, maxlength: 128 },
   description: { type: String, required: true, maxlength: 512 },
   image: { type: String, required: true, maxlength: 128 },

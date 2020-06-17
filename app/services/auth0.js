@@ -2,7 +2,7 @@ import auth0 from 'auth0-js'
 import Cookies from 'js-cookie'
 
 const CLIENT_URL = process.env.CLIENT_URL;
-console
+// console
 
 class Auth0 {
 
